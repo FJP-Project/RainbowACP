@@ -36,7 +36,7 @@ export default function HomePage() {
                 alt="Logo RIJA"
                 width={160}
                 height={160}
-                className="xs:w-20 xs:h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-15"
+                className="xs:w-20 xs:h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-12"
                 priority
                 quality={100}
                 unoptimized={false}
@@ -198,7 +198,7 @@ export default function HomePage() {
       <section className="py-16 xs:py-20 sm:py-24 md:py-28 lg:py-32 bg-white">
         <div className="w-full mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6 xs:mb-8 sm:mb-10 md:mb-12 flex justify-center">
-            <div className="relative w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+            <div className="relative w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl">
               <Image
                 src="/assets/images/indonesia.png"
                 alt="Indonesia Distribution Map"
