@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white py-8 xs:py-10 sm:py-12 md:py-14 lg:py-16 px-2 xs:px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center items-center justify-center flex mb-6">
-          <div className="relative w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40">
+          <div className="relative w-32 h-32 xs:w-28 xs:h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40">
             <Image 
               src="/assets/images/whiteLogo-RIJA.png"
               alt='RIJA Company Logo'
@@ -89,13 +89,11 @@ const Footer: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   className="w-full bg-transparent border-b border-gray-600 py-2 xs:py-3 px-0 text-xs xs:text-sm text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none transition-colors"
-                  required
-                />
+                  required/>
                 <button
                   type="submit"
                   className="absolute right-0 top-1/2 transform -translate-y-1/2 text-orange-500 hover:text-orange-400 transition-colors"
-                  aria-label="Subscribe to newsletter"
-                >
+                  aria-label="Subscribe to newsletter">
                   <Send size={16} className="xs:w-5 xs:h-5" />
                 </button>
               </div>
@@ -109,8 +107,7 @@ const Footer: React.FC = () => {
             className="text-gray-400 hover:text-white transition-colors"
             aria-label="Follow us on YouTube"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <Youtube size={20} className="xs:w-6 xs:h-6" />
           </Link>
           <Link 
@@ -118,15 +115,13 @@ const Footer: React.FC = () => {
             className="text-gray-400 hover:text-white transition-colors"
             aria-label="Follow us on Facebook"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <Facebook size={20} className="xs:w-6 xs:h-6" />
           </Link>
           <Link 
             href="#" 
             className="text-gray-400 hover:text-white transition-colors"
-            aria-label="Listen to our music"
-          >
+            aria-label="Listen to our music">
             <Music size={20} className="xs:w-6 xs:h-6" />
           </Link>
         </div>

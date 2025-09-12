@@ -81,18 +81,6 @@ export default function ProductPage() {
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 opacity-90">
             Premium Aluminium Composite Panel
           </p>
-          <div className="flex items-center justify-center">
-            <Image
-              src="/assets/images/whiteLogo-RIJA.png"
-              alt="Rainbow ACP Logo"
-              width={120}
-              height={120}
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
-              priority
-              quality={100}
-              sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, (max-width: 1024px) 96px, 112px"
-            />
-          </div>
         </div>
       </section>
 
@@ -265,14 +253,14 @@ export default function ProductPage() {
                 <br />
                 <span className="text-yellow-400">Estetik??</span>
               </h2>
-              <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-lg">
+              <p className="text-sm md:text-xl opacity-90 leading-relaxed max-w-lg">
                 Wujudkan impian arsitektur modern Anda dengan Rainbow ACP.
                 Konsultasi gratis untuk solusi terbaik!
               </p>
             </div>
                 
             <div className="flex justify-center lg:justify-end">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-sm md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Hubungi Kami
               </button>
             </div>

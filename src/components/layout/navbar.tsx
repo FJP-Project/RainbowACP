@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-md z-50 fixed w-full">
       <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-4 lg:px-8">
-        <div className="flex justify-between items-center h-14 xs:h-16 sm:h-18 md:h-20 lg:h-24">
+        <div className="flex justify-between px-4 items-center h-14 xs:h-16 sm:h-18 md:h-20 lg:h-24">
           <div className="flex-shrink-0">
             <Image 
               src="/assets/images/mainLogo-RIJA.png"
@@ -65,8 +65,8 @@ const Navbar: React.FC = () => {
               className="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900 p-0.5 xs:p-1 sm:p-2"
               aria-label="Toggle menu">
               {isMenuOpen ? 
-                <X size={16} className="xs:w-5 xs:h-5 sm:w-6 sm:h-6" /> : 
-                <Menu size={16} className="xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
+                <X size={16} className="w-6 h-6" /> : 
+                <Menu size={16} className="w-6 h-6" />
               }
             </button>
           </div>
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
               alt='mainLogo-RIJA'
               width={120}
               height={120}
-              className="w-16 h-16 xs:w-18 xs:h-18 sm:w-20 sm:h-20 object-contain"
+              className="w-24 h-24 xs:w-18 xs:h-18 sm:w-20 sm:h-20 object-contain"
               priority
               quality={100}
               unoptimized={true}
@@ -122,26 +122,6 @@ const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}>
               Hubungi Kami
             </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-4 lg:px-8">
-          <div className="flex items-center h-6 xs:h-8 sm:h-10 lg:h-12">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-0.5 xs:space-x-1 sm:space-x-2 text-xs xs:text-xs sm:text-sm">
-                <li>
-                  <Link href="/" className="text-gray-500 hover:text-gray-700 transition-colors">
-                    Rainbow
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-gray-400 mx-0.5 xs:mx-1 sm:mx-2">-</span>
-                  <span className="text-gray-700 font-medium">Homepage</span>
-                </li>
-              </ol>
-            </nav>
           </div>
         </div>
       </div>

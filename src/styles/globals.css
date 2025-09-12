@@ -125,7 +125,7 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 
   100% {
@@ -134,7 +134,6 @@
 }
 
 .animate-scroll {
-  display: flex;
-  animation: scroll 100s linear infinite;
+  animation: scroll 80s linear infinite;
   width: max-content;
 }
