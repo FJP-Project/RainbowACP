@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { name: 'Beranda', href: '/' },
-    { name: 'Produk', href: '/produk' },
+    { name: 'Produk', href: '/pages/produk' },
     { name: 'Distributor', href: '/distributor' },
     { name: 'Informasi', href: '/informasi' }
   ];
@@ -37,21 +37,20 @@ const Navbar: React.FC = () => {
             />
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-4 lg:ml-10 flex items-center space-x-2 lg:space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-gray-900 px-1 lg:px-3 py-1 lg:py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors duration-200 whitespace-nowrap">
+                  className="relative text-gray-700 hover:text-gray-900 px-1 lg:px-3 py-1 lg:py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors duration-200 whitespace-nowrap group">
                   {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-full"></span>
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Desktop Contact Button */}
           <div className="hidden md:block">
             <Link
               href="/hubungi-kami"
@@ -60,7 +59,6 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -73,16 +71,14 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-        
-        {/* Mobile menu overlay */}
+
         <div 
           className={`md:hidden fixed inset-0 bg-black transition-opacity duration-300 z-40 ${
             isMenuOpen ? 'opacity-50' : 'opacity-0 pointer-events-none'
           }`}
           onClick={() => setIsMenuOpen(false)}
         />
-        
-        {/* Mobile menu sidebar */}
+
         <div className={`md:hidden fixed top-0 right-0 h-full w-64 xs:w-72 sm:w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
@@ -111,9 +107,10 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 xs:px-4 py-2 xs:py-3 text-sm xs:text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md xs:rounded-lg transition-colors duration-200"
+                className="relative block px-3 xs:px-4 py-2 xs:py-3 text-sm xs:text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md xs:rounded-lg transition-all duration-200 group"
                 onClick={() => setIsMenuOpen(false)}>
                 {item.name}
+                <span className="absolute bottom-1 left-3 xs:left-4 w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-[calc(100%-1.5rem)] xs:group-hover:w-[calc(100%-2rem)]"></span>
               </Link>
             ))}
           </div>
@@ -129,7 +126,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumb */}
       <div className="bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-4 lg:px-8">
           <div className="flex items-center h-6 xs:h-8 sm:h-10 lg:h-12">

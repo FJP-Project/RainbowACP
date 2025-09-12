@@ -25,18 +25,57 @@ export default function HomePage() {
   }
 ];
 
-  const colors = [
-    { id: 1, name: 'Ocean Blue', bg: 'bg-blue-500' },
-    { id: 2, name: 'Forest Green', bg: 'bg-green-500' },
-    { id: 3, name: 'Sunset Yellow', bg: 'bg-yellow-400' },
-    { id: 4, name: 'Ruby Red', bg: 'bg-red-500' },
-    { id: 5, name: 'Royal Purple', bg: 'bg-purple-500' },
-    { id: 6, name: 'Silver Gray', bg: 'bg-gray-400' },
-    { id: 7, name: 'Emerald', bg: 'bg-emerald-500' },
-    { id: 8, name: 'Rose Gold', bg: 'bg-rose-400' },
-    { id: 9, name: 'Midnight Black', bg: 'bg-gray-900' },
-    { id: 10, name: 'Pure White', bg: 'bg-white' },
-  ];
+const colors = [
+  { id: 1, name: 'Bright Silver', hex: '#D9D9D6' },
+  { id: 2, name: 'Sub Silver', hex: '#C0C0C0' },
+  { id: 3, name: 'Jade Silver', hex: '#A8B3A2' },
+  { id: 4, name: 'Champagne Golden', hex: '#C8B273' },
+  { id: 5, name: 'White', hex: '#FFFFFF' },
+  { id: 6, name: 'ICBC Gray', hex: '#808080' },
+  { id: 7, name: 'Silver Blue', hex: '#7B9AA6' },
+  { id: 8, name: 'Golden', hex: '#D4AF37' },
+  { id: 9, name: 'Ivory White', hex: '#F2E6D9' },
+  { id: 10, name: 'China Grey', hex: '#5A6A6C' },
+  { id: 11, name: 'Ratash Silver', hex: '#7D7D7D' },
+  { id: 12, name: 'Copper', hex: '#B87333' },
+  { id: 13, name: 'Beige', hex: '#E6D5B8' },
+  { id: 14, name: 'Dark Gray', hex: '#4A4A4A' },
+  { id: 15, name: 'Sparking Black', hex: '#2B2B2B' },
+  { id: 16, name: 'Black Glossy', hex: '#000000' },
+  { id: 17, name: 'Chinese Red', hex: '#C41E3A' },
+  { id: 18, name: 'Xinhua Red', hex: '#B22222' },
+  { id: 19, name: 'Coffee', hex: '#6F4E37' },
+  { id: 20, name: 'Yellow', hex: '#FFD700' },
+  { id: 21, name: 'Tiffany Blue', hex: '#40E0D0' },
+  { id: 22, name: 'Lake Blue', hex: '#4682B4' },
+  { id: 23, name: 'Telecom Blue', hex: '#1E5AA8' },
+  { id: 24, name: 'Navy Blue', hex: '#000080' },
+  { id: 25, name: 'Sparking White', hex: '#F8F8FF' },
+  { id: 26, name: 'Pearlish Red', hex: '#E34234' },
+  { id: 27, name: 'Red Gloss', hex: '#FF0000' },
+  { id: 28, name: 'Brown Glossy', hex: '#5C4033' },
+  { id: 29, name: 'Yellow Glossy', hex: '#FFC300' },
+  { id: 30, name: 'Orange Yellow Glossy', hex: '#FFA500' },
+  { id: 31, name: 'Brilliant Orange Glossy', hex: '#FF6700' },
+  { id: 32, name: 'Light Green Gloss', hex: '#90EE90' },
+  { id: 33, name: 'Apple Green Glossy', hex: '#32CD32' },
+  { id: 34, name: 'Telecom Blue Glossy', hex: '#0077BE' },
+  { id: 35, name: 'Sparking Blue', hex: '#005F99' },
+  { id: 36, name: 'White Granite', hex: '#F5F5F5' },
+  { id: 37, name: 'Gold Brushed', hex: '#BFA76F' },
+  { id: 38, name: 'Silver Brushed', hex: '#B0B0B0' },
+  { id: 39, name: 'Copper Brushed', hex: '#B87333' },
+  { id: 40, name: 'Black Maquina', hex: '#2B2B2B' },
+  { id: 41, name: 'Gold Mirror', hex: '#FFD700' },
+  { id: 42, name: 'Silver Mirror', hex: '#C0C0C0' },
+  { id: 43, name: 'Tawny Glasses', hex: '#8B5A2B' },
+  { id: 44, name: 'Shah Anna Beige', hex: '#E6D1B3' },
+  { id: 45, name: 'White Oak', hex: '#E5D3B3' },
+  { id: 46, name: 'Teak', hex: '#D18547' },
+  { id: 47, name: 'Walnut', hex: '#5D3A1A' },
+  { id: 48, name: 'Golden Flower Beige', hex: '#D9C19B' },
+];
+
 
   return (
     <>
@@ -73,7 +112,7 @@ export default function HomePage() {
             </div>
 
             <div className="lg:w-2/3">
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
+              <div className="grid grid-cols-5 md:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
                 {[1, 2, 3, 4, 5].map((num) => (
                   <div key={num} className="flex justify-center items-center">
                     <Image
@@ -129,7 +168,7 @@ export default function HomePage() {
               <div
                 key={index}
                 className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <div className="flex items-center justify-center mb-4 sm:mb-6">
+                <div className="flex items-left justify-left mb-4 sm:mb-6">
                   <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {feature.number}
                   </div>
@@ -168,6 +207,7 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
+
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 md:mb-12 lg:mb-16">
               <span className="text-blue-400">1</span>
@@ -175,19 +215,21 @@ export default function HomePage() {
               <span className="text-yellow-400">0</span>
               <span className="text-white">+ Pilihan Warna</span>
             </h2>
-            
+
             <div className="w-full max-w-full overflow-hidden">
-              <div className="justify-start flex gap-4 md:gap-6 lg:gap-8 overflow-x-auto overflow-scroll pb-4 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 scrollbar-hide">
-                {colors.map((color) => (
+              <div className="flex animate-scroll gap-6">
+                {[...colors, ...colors].map((color, i) => (
                   <div
-                    key={color.id}
+                    key={`${color.id}-${i}`}
                     className="flex-shrink-0 group cursor-pointer flex flex-col items-center">
-                    <div className={`
-                      ${color.bg} 
-                      ${color.bg === 'bg-white' ? 'border-4 border-gray-300' : 'border-1 border-white'} 
-                      rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-300
-                      w-16 h-10 sm:w-24 sm:h-16 md:w-32 md:h-20 lg:w-40 lg:h-24 xl:w-48 xl:h-32`}>
-                    </div>
+                    <div
+                      style={{ backgroundColor: color.hex }}
+                      className={`
+                        ${color.hex === '#FFFFFF' ? 'border-4 border-gray-300' : 'border border-white'} 
+                        rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-300
+                        w-42 h-32 sm:w-24 sm:h-16 md:w-32 md:h-20 lg:w-40 lg:h-24 xl:w-48 xl:h-48
+                      `}
+                    ></div>
                     <p className="text-white text-xs sm:text-sm md:text-base font-medium mt-2 sm:mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
                       {color.name}
                     </p>
