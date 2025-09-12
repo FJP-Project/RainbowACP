@@ -177,7 +177,7 @@ export default function HomePage() {
             </h2>
             
             <div className="w-full max-w-full overflow-hidden">
-              <div className="flex gap-4 md:gap-6 lg:gap-8 overflow-x-auto pb-4 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 scrollbar-hide justify-center">
+              <div className="justify-start flex gap-4 md:gap-6 lg:gap-8 overflow-x-auto overflow-scroll pb-4 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 scrollbar-hide">
                 {colors.map((color) => (
                   <div
                     key={color.id}
