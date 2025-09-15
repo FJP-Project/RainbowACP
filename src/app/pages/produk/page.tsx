@@ -84,20 +84,20 @@ export default function ProductPage() {
         </div>
       </section>
 
+      {/* Spesifikasi Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
+        <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="text-left mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
               Spesifikasi
               <br />
               <span className="text-blue-600">Rainbow ACP</span>
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl">
               Teknologi terdepan dengan material berkualitas tinggi untuk hasil maksimal
             </p>
           </div>
-
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative">
             <div className="flex justify-center mb-8 md:mb-12">
               <div className="relative w-full max-w-lg md:max-w-2xl">
                 <Image
@@ -111,23 +111,25 @@ export default function ProductPage() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+            
+            {/* Desktop - 2x2 Grid, Mobile - 1 column */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
               {specifications.map((spec, index) => (
                 <div
                   key={spec.id}
-                  className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="flex items-start gap-x-4">
-                    <div className={`
-                      ${spec.color} 
-                      w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl flex-shrink-0
-                    `}>
+                  className="bg-white rounded-xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-fit">
+                  <div className="flex items-start">
+                    <div className={`${spec.color} w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg flex-shrink-0`}>
                       {spec.id}
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-2 md:mb-3">
+                    <div className="relative mx-3 sm:mx-4 flex-shrink-0 flex justify-center">
+                      <div className={`${spec.color} w-1 h-6 sm:h-8 rounded-full`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
                         {spec.title}
                       </h3>
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
                         {spec.description}
                       </p>
                     </div>
@@ -139,14 +141,26 @@ export default function ProductPage() {
         </div>
       </section>
 
+      {/* Features Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+              Keunggulan
+              <br />
+              <span className="text-blue-600">Rainbow ACP</span>
+            </h2>
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+              Berbagai keunggulan yang membuat Rainbow ACP menjadi pilihan terbaik
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <div className="flex items-left justify-left mb-4 sm:mb-6">
+                className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center h-full flex flex-col">
+                <div className="flex items-center justify-start mb-4 sm:mb-6">
                   <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {feature.number}
                   </div>
@@ -163,7 +177,7 @@ export default function ProductPage() {
                   />
                 </div>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   {feature.description}
                 </p>
               </div>
@@ -171,6 +185,8 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
+
+      {/* Aplikasi Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -199,11 +215,11 @@ export default function ProductPage() {
                   description: "Ideal untuk papan nama, signage komersial, dan branding dengan hasil cetak yang tajam dan tahan lama."
                 }
               ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                  <div className="bg-green-500 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                  <div className="bg-green-500 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                       {item.title}
                     </h3>
@@ -270,4 +286,4 @@ export default function ProductPage() {
 
     </>
   )
-}
+} 

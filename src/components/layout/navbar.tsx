@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Produk', href: '/pages/produk' },
-    { name: 'Distributor', href: '/distributor' },
-    { name: 'Informasi', href: '/informasi' }
+    { name: 'Distributor', href: '/pages/distributor' },
+    { name: 'Informasi', href: '/pages/informasi' }
   ];
 
   return (
