@@ -83,8 +83,6 @@ export default function ProductPage() {
           </p>
         </div>
       </section>
-
-      {/* Spesifikasi Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50">
         <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-left mb-12 md:mb-16">
@@ -111,8 +109,6 @@ export default function ProductPage() {
                 />
               </div>
             </div>
-            
-            {/* Desktop - 2x2 Grid, Mobile - 1 column */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
               {specifications.map((spec, index) => (
                 <div
@@ -123,7 +119,7 @@ export default function ProductPage() {
                       {spec.id}
                     </div>
                     <div className="relative mx-3 sm:mx-4 flex-shrink-0 flex justify-center">
-                      <div className={`${spec.color} w-1 h-6 sm:h-8 rounded-full`} />
+                      <div className={`${spec.color} w-1 h-20 rounded-full`} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
@@ -140,8 +136,6 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
@@ -185,8 +179,6 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
-
-      {/* Aplikasi Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
