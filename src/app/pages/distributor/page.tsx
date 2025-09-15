@@ -6,7 +6,7 @@ import { MapPin, Phone, Mail, Clock, Building2 } from 'lucide-react'
 
 export default function DistributorPage() {
   const distributors = [
-    {
+    {   
       id: 1,
       city: "Sidoarjo",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
@@ -74,7 +74,7 @@ export default function DistributorPage() {
             <div className="relative bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm">
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[28rem]">
                 <Image
-                  src="/assets/images/distribution/indonesia.png"
+                  src="/assets/images/distributor/indonesia.png"
                   alt="Peta Indonesia"
                   fill
                   className="object-contain"
