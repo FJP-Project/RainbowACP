@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import { CheckCircle, Layers, Shield, Zap } from 'lucide-react'
@@ -39,19 +40,19 @@ export default function ProductPage() {
     const features = [
       {
         number: "1",
-        icon: "/assets/images/randomAssets/map.png",
+        icon: "/assets/images/randomAssets/map.webp",
         title: "100+ Warna dan Ukuran",
         description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan."
       },
       {
         number: "2",
-        icon: "/assets/images/randomAssets/colorfilter.png",
+        icon: "/assets/images/randomAssets/colorfilter.webp",
         title: "Desain Fleksibel",
         description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern."
       },
       {
         number: "3",
-        icon: "/assets/images/randomAssets/shield-tick.png",
+        icon: "/assets/images/randomAssets/shield-tick.webp",
         title: "Kualitas Terjamin",
         description: "Produk yang sudah melalui uji standar internasional."
       }
@@ -72,15 +73,12 @@ export default function ProductPage() {
 
       <section
         className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/images/produk/produkHero.png')" }}>
+        style={{ backgroundImage: "url('/assets/images/produk/produkHero.webp')" }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Produk Kami
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 opacity-90">
-            Premium Aluminium Composite Panel
-          </p>
         </div>
       </section>
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50">
@@ -99,7 +97,7 @@ export default function ProductPage() {
             <div className="flex justify-center mb-8 md:mb-12">
               <div className="relative w-full max-w-lg md:max-w-2xl">
                 <Image
-                  src="/assets/images/produk/RainbowACP-Simulation.png"
+                  src="/assets/images/produk/RainbowACP-Simulation.webp"
                   alt="Rainbow ACP Colorful Panels Specification"
                   width={600}
                   height={400}
@@ -226,7 +224,7 @@ export default function ProductPage() {
             <div className="relative">
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/assets/images/produk/produkImage-assets1.png"
+                  src="/assets/images/produk/produkImage-assets1.webp"
                   alt="Modern Building with Rainbow ACP Facade"
                   fill
                   className="object-cover"
@@ -248,7 +246,7 @@ export default function ProductPage() {
 
       <section
         className="relative py-20 sm:py-24 md:py-32 lg:py-40 bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/images/produk/produkImage-assets2.png')" }}>
+        style={{ backgroundImage: "url('/assets/images/produk/produkImage-assets2.webp')" }}>
         <div className="absolute inset-0 bg-black/40"></div>
                 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -268,9 +266,9 @@ export default function ProductPage() {
             </div>
                 
             <div className="flex justify-center lg:justify-end">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-sm md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <Link href="/pages/kontak" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
                 Hubungi Kami
-              </button>
+              </Link>
             </div>
           </div>
         </div>

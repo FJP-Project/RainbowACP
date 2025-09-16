@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import { MapPin, Phone, Mail, Clock, Building2 } from 'lucide-react'
@@ -10,22 +11,22 @@ export default function DistributorPage() {
       id: 1,
       city: "Sidoarjo",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      buttonText: "Hubungi Kami",
-      buttonColor: "bg-orange-500 hover:bg-orange-600"
+      LinkText: "Hubungi Kami",
+      LinkColor: "bg-orange-500 hover:bg-orange-600"
     },
     {
       id: 2,
       city: "Surabaya", 
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      buttonText: "Hubungi Kami",
-      buttonColor: "bg-orange-500 hover:bg-orange-600"
+      LinkText: "Hubungi Kami",
+      LinkColor: "bg-orange-500 hover:bg-orange-600"
     },
     {
       id: 3,
       city: "Jakarta",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      buttonText: "Hubungi Kami", 
-      buttonColor: "bg-orange-500 hover:bg-orange-600"
+      LinkText: "Hubungi Kami", 
+      LinkColor: "bg-orange-500 hover:bg-orange-600"
     }
   ];
 
@@ -44,11 +45,11 @@ export default function DistributorPage() {
       <section 
         className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/assets/images/distributor/distributor-hero.png')"
+          backgroundImage: "url('/assets/images/distributor/distributor-hero.webp')"
         }}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Distributor
           </h1>
         </div>
@@ -74,7 +75,7 @@ export default function DistributorPage() {
             <div className="relative bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm">
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[28rem]">
                 <Image
-                  src="/assets/images/distributor/indonesia.png"
+                  src="/assets/images/distributor/indonesia.webp"
                   alt="Peta Indonesia"
                   fill
                   className="object-contain"
@@ -86,7 +87,7 @@ export default function DistributorPage() {
           </div>
 
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               Distributor Resmi
             </h2>
           </div>
@@ -97,19 +98,19 @@ export default function DistributorPage() {
                 key={distributor.id}
                 className="text-center">
                 <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <MapPin className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-white" />
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                    <MapPin className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
                   {distributor.city}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8 px-2">
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 px-2">
                   {distributor.description}
                 </p>
-                <button className={`${distributor.buttonColor} text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105`}>
-                  {distributor.buttonText}
-                </button>
+                <Link href="" className={`${distributor.LinkColor} text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105`}>
+                  {distributor.LinkText}
+                </Link>
               </div>
             ))}
           </div>
@@ -120,12 +121,12 @@ export default function DistributorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Beyond Ordinary<br />
                 <span className="block">Panels</span>
               </h2>
               
-              <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed max-w-lg">
+              <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Nam volutpat lorem ut velit molestie, ut aliquet orci 
                 mattis. Class aptent taciti sociosqu ad litora torquent per 
@@ -133,16 +134,16 @@ export default function DistributorPage() {
               </p>
               
               <div className="pt-2">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <Link href="" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                   Hubungi Kami
-                </button>
+                </Link>
               </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                 <Image
-                  src="/assets/images/distributor/distributor-assets1.png"
+                  src="/assets/images/distributor/distributor-assets1.webp"
                   alt="Rainbow ACP Construction Mascot Character"
                   fill
                   className="object-contain"
@@ -157,15 +158,15 @@ export default function DistributorPage() {
 
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 md:mb-12 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-12 leading-tight">
             Jadilah bagian distribusi<br />
             <span className="block">Rainbow ACP</span>
           </h2>
           
           <div className="pt-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-lg text-sm md:text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <Link href="" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-lg text-sm md:text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Hubungi Kami
-            </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         <div className="text-center items-center justify-center flex mb-6">
           <div className="relative w-32 h-32 xs:w-28 xs:h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40">
             <Image 
-              src="/assets/images/whiteLogo-RIJA.png"
+              src="/assets/images/whiteLogo-RIJA.webp"
               alt='RIJA Company Logo'
               fill
               className="object-contain"

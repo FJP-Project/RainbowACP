@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, Palette, Building } from 'lucide-react'
 
@@ -7,19 +8,19 @@ export default function HomePage() {
   const features = [
   {
     number: "1",
-    icon: "/assets/images/randomAssets/map.png",
+    icon: "/assets/images/randomAssets/map.webp",
     title: "100+ Warna dan Ukuran",
     description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan."
   },
   {
     number: "2",
-    icon: "/assets/images/randomAssets/colorfilter.png",
+    icon: "/assets/images/randomAssets/colorfilter.webp",
     title: "Desain Fleksibel",
     description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern."
   },
   {
     number: "3",
-    icon: "/assets/images/randomAssets/shield-tick.png",
+    icon: "/assets/images/randomAssets/shield-tick.webp",
     title: "Kualitas Terjamin",
     description: "Produk yang sudah melalui uji standar internasional."
   }
@@ -81,12 +82,12 @@ const colors = [
     <>
       <section
         className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/images/home-Hero.png')" }}>
+        style={{ backgroundImage: "url('/assets/images/home-Hero.webp')" }}>
         <div className="relative z-10 text-center text-white px-4 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
           <div className="mb-8 md:mb-12">
             <div className="flex items-center justify-center">
               <Image
-                src="/assets/images/whiteLogo-RIJA.png"
+                src="/assets/images/whiteLogo-RIJA.webp"
                 alt="Logo RIJA"
                 width={160}
                 height={160}
@@ -116,7 +117,7 @@ const colors = [
                 {[1, 2, 3, 4, 5].map((num) => (
                   <div key={num} className="flex justify-center items-center">
                     <Image
-                      src={`/assets/images/CTA-Taraf/tarafInternational_${num}.png`}
+                      src={`/assets/images/CTA-Taraf/tarafInternational_${num}.webp`}
                       alt={`Certification ${num}`}
                       width={112}
                       height={112}
@@ -148,7 +149,7 @@ const colors = [
 
             <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 rounded-lg overflow-hidden mx-auto">
               <Image
-                src="/assets/images/home-About.png"
+                src="/assets/images/home-About.webp"
                 alt="Modern Architecture"
                 fill
                 className="object-cover"
@@ -198,7 +199,7 @@ const colors = [
         <div className="relative py-20 sm:py-24 md:py-32 lg:py-40">
           <div className="relative h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] overflow-hidden">
             <Image
-              src="/assets/images/home-Katalog.png"
+              src="/assets/images/home-Katalog.webp"
               alt="Color Selection Background"
               fill
               className="object-cover"
@@ -244,7 +245,7 @@ const colors = [
           <div className="mb-8 md:mb-12 flex justify-center">
             <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl">
               <Image
-                src="/assets/images/indonesia.png"
+                src="/assets/images/indonesia.webp"
                 alt="Indonesia Distribution Map"
                 width={800}
                 height={400}
@@ -269,9 +270,9 @@ const colors = [
             <br />
             Rainbow ACP
           </h2>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <Link href="/pages/kontak" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
             Hubungi Kami
-          </button>
+          </Link>
         </div>
       </section>
 

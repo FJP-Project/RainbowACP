@@ -16,23 +16,23 @@ const Navbar: React.FC = () => {
     { name: 'Beranda', href: '/' },
     { name: 'Produk', href: '/pages/produk' },
     { name: 'Distributor', href: '/pages/distributor' },
-    { name: 'Informasi', href: '/pages/informasi' }
+    { name: 'Instalasi', href: '/pages/instalasi' }
   ];
 
   return (
     <nav className="bg-white shadow-md z-50 fixed w-full">
-      <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-4 lg:px-8">
-        <div className="flex justify-between px-4 items-center h-14 xs:h-16 sm:h-18 md:h-20 lg:h-24">
+      <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-4 lg:px-4">
+        <div className="flex justify-between px-4 items-center h-14 xs:h-16 sm:h-18 md:h-20 lg:h-20">
           <div className="flex-shrink-0">
             <Image 
-              src="/assets/images/mainLogo-RIJA.png"
+              src="/assets/images/mainLogo-RIJA.webp"
               alt='mainLogo-RIJA'
               width={200}
               height={200}
               className="w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain"
               priority
               quality={100}
-              unoptimized={true}
+              unoptimized={false}
               sizes="(max-width: 480px) 112px, (max-width: 640px) 128px, (max-width: 768px) 144px, (max-width: 1024px) 160px, 160px"
             />
           </div>
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                   href={item.href}
                   className="relative text-gray-700 hover:text-gray-900 px-1 lg:px-3 py-1 lg:py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors duration-200 whitespace-nowrap group">
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 rounded-full transition-all duration-300 ease-out group-hover:w-full"></span>
                 </Link>
               ))}
             </div>
@@ -53,8 +53,8 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:block">
             <Link
-              href="/hubungi-kami"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-2 lg:px-4 py-1 lg:py-2 rounded text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap">
+              href="/pages/kontak"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-2 lg:px-6 font-bold py-1 lg:py-3 rounded-md text-xs sm:text-sm transition-colors duration-200 whitespace-nowrap">
               Hubungi Kami
             </Link>
           </div>
