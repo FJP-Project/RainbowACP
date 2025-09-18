@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Footer from '../components/layout/footer'
 import Navbar from '../components/layout/navbar'
 import "../styles/globals.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,27 @@ export default function RootLayout({
           <Navbar />
             {children}
           <Footer />
+
+          {/* Sticky WhatsApp Button */}
+          <div className="fixed bottom-6 right-6 z-50 group cursor-pointer">
+            <a
+              href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20ACP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 animate-bounce-slow"
+            >
+              <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <FaWhatsapp className="w-7 h-7 sm:w-8 sm:h-8 z-10 drop-shadow-sm" />
+                <div className="absolute inset-0 rounded-full bg-green-400 opacity-25 animate-ping"></div>
+              </div>
+              <div className="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap pointer-events-none">
+                <span>Kontak Kami</span>
+                <div className="absolute top-1/2 -right-1 transform -translate-y-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+              </div>
+            </a>
+            <div className="absolute inset-0 rounded-full border-2 border-green-400 opacity-30 animate-ping animation-delay-1000"></div>
+          </div>
       </body>
     </html>
   );

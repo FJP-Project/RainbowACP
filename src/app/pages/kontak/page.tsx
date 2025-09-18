@@ -1,8 +1,10 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import Head from 'next/head'
 import { Phone, MessageCircle, MapPin, Clock, Mail, Building2 } from 'lucide-react'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactPage() {
   const contactMethods = [

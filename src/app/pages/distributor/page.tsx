@@ -3,32 +3,53 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
 import { MapPin, Phone, Mail, Clock, Building2 } from 'lucide-react'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function DistributorPage() {
   const distributors = [
     {   
       id: 1,
       city: "Sidoarjo",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      address: "Jl. Raya Bypass Krian No. 123, Krian, Sidoarjo, Jawa Timur 61262",
       LinkText: "Hubungi Kami",
       LinkColor: "bg-orange-500 hover:bg-orange-600"
     },
     {
       id: 2,
       city: "Surabaya", 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      address: "Jl. Ahmad Yani No. 456, Gayungan, Surabaya, Jawa Timur 60235",
       LinkText: "Hubungi Kami",
       LinkColor: "bg-orange-500 hover:bg-orange-600"
     },
     {
       id: 3,
       city: "Jakarta",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      address: "Jl. TB Simatupang No. 789, Cilandak, Jakarta Selatan, DKI Jakarta 12430",
       LinkText: "Hubungi Kami", 
       LinkColor: "bg-orange-500 hover:bg-orange-600"
     }
   ];
+
+  const mascotImages = [
+    "/assets/images/mascot/mascot1-main.webp",
+    "/assets/images/mascot/mascot2-contractor.webp",
+    "/assets/images/mascot/mascot3-arsitek.webp",
+    "/assets/images/mascot/mascot4-pengirim.webp"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === mascotImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); 
+
+    return () => clearInterval(interval);
+  }, [mascotImages.length]);
 
   return (
     <>
@@ -72,7 +93,7 @@ export default function DistributorPage() {
           </div>
 
           <div className="relative max-w-4xl mx-auto mb-16 md:mb-20">
-            <div className="relative bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm">
+            <div className="relative rounded-2xl p-8 md:p-12">
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[28rem]">
                 <Image
                   src="/assets/images/distributor/indonesia.webp"
@@ -105,8 +126,8 @@ export default function DistributorPage() {
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
                   {distributor.city}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 px-2">
-                  {distributor.description}
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 px-2 min-h-[4rem] flex items-center justify-center">
+                  {distributor.address}
                 </p>
                 <Link href="" className={`${distributor.LinkColor} text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105`}>
                   {distributor.LinkText}
@@ -143,13 +164,28 @@ export default function DistributorPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                 <Image
-                  src="/assets/images/distributor/distributor-assets1.webp"
-                  alt="Rainbow ACP Construction Mascot Character"
+                  src={mascotImages[currentImageIndex]}
+                  alt={`Rainbow ACP Construction Mascot Character ${currentImageIndex + 1}`}
                   fill
-                  className="object-contain"
+                  className="object-contain transition-opacity duration-500 ease-in-out"
                   quality={100}
                   sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 448px"
                 />
+
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {mascotImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? 'bg-blue-600 scale-110' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

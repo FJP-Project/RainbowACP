@@ -2,11 +2,13 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,6 +20,13 @@ const Navbar: React.FC = () => {
     { name: 'Distributor', href: '/pages/distributor' },
     { name: 'Instalasi', href: '/pages/instalasi' }
   ];
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname === href;
+  };
 
   return (
     <nav className="bg-white shadow-md z-50 fixed w-full">
@@ -43,9 +52,19 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative text-gray-700 hover:text-gray-900 px-1 lg:px-3 py-1 lg:py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors duration-200 whitespace-nowrap group">
+                  className={`relative px-1 lg:px-3 py-1 lg:py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors duration-200 whitespace-nowrap group ${
+                    isActive(item.href) 
+                      ? 'text-blue-600' 
+                      : 'text-gray-700 hover:text-gray-900'
+                  }`}>
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 rounded-full transition-all duration-300 ease-out group-hover:w-full"></span>
+                  <span 
+                    className={`absolute bottom-0 left-0 h-1 bg-blue-600 rounded-full transition-all duration-300 ease-out ${
+                      isActive(item.href) 
+                        ? 'w-full' 
+                        : 'w-0 group-hover:w-full'
+                    }`}>
+                  </span>
                 </Link>
               ))}
             </div>
@@ -107,17 +126,27 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative block px-3 xs:px-4 py-2 xs:py-3 text-sm xs:text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md xs:rounded-lg transition-all duration-200 group"
+                className={`relative block px-3 xs:px-4 py-2 xs:py-3 text-sm xs:text-base font-medium rounded-md xs:rounded-lg transition-all duration-200 group ${
+                  isActive(item.href)
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                }`}
                 onClick={() => setIsMenuOpen(false)}>
                 {item.name}
-                <span className="absolute bottom-1 left-3 xs:left-4 w-0 h-0.5 bg-blue-600 transition-all duration-300 ease-out group-hover:w-[calc(100%-1.5rem)] xs:group-hover:w-[calc(100%-2rem)]"></span>
+                <span 
+                  className={`absolute bottom-1 left-3 xs:left-4 h-0.5 bg-blue-600 transition-all duration-300 ease-out ${
+                    isActive(item.href)
+                      ? 'w-[calc(100%-1.5rem)] xs:w-[calc(100%-2rem)]'
+                      : 'w-0 group-hover:w-[calc(100%-1.5rem)] xs:group-hover:w-[calc(100%-2rem)]'
+                  }`}>
+                </span>
               </Link>
             ))}
           </div>
           
           <div className="px-3 xs:px-4 sm:px-6 pt-2 xs:pt-4">
             <Link
-              href="/hubungi-kami"
+              href="/pages/kontak"
               className="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white px-4 xs:px-6 py-2 xs:py-3 rounded-md xs:rounded-lg text-sm xs:text-sm font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}>
               Hubungi Kami

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import { CheckCircle } from 'lucide-react'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function InstalasiPage() {
   const installasiSteps = [

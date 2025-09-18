@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import { CheckCircle, Layers, Shield, Zap } from 'lucide-react'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ProductPage() {
   const specifications = [
@@ -112,7 +113,7 @@ export default function ProductPage() {
                 <div
                   key={spec.id}
                   className="bg-white rounded-xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-fit">
-                  <div className="flex items-start">
+                  <div className="flex justify-center items-center">
                     <div className={`${spec.color} w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg flex-shrink-0`}>
                       {spec.id}
                     </div>
@@ -266,14 +267,13 @@ export default function ProductPage() {
             </div>
                 
             <div className="flex justify-center lg:justify-end">
-              <Link href="/pages/kontak" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <Link href="https://wa.me/" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
                 Hubungi Kami
               </Link>
             </div>
           </div>
         </div>
     </section>
-
     </>
   )
 } 
