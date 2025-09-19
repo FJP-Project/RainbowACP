@@ -62,18 +62,12 @@ export default function ContactPage() {
         <link rel="canonical" href="https://yoursite.com/kontak" />
       </Head>
 
-      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/images/kontak/kontak-hero.webp"
-            alt="Rainbow ACP Office Building"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-      
+      <section 
+        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
+        style={{ 
+          backgroundImage: "url('/assets/images/kontak/kontak-hero.webp')"
+        }}>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-7xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Hubungi Kami

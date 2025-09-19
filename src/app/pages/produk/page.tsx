@@ -73,7 +73,7 @@ export default function ProductPage() {
       </Head>
 
       <section
-        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/assets/images/produk/produkHero.webp')" }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
@@ -267,7 +267,9 @@ export default function ProductPage() {
             </div>
                 
             <div className="flex justify-center lg:justify-end">
-              <Link href="https://wa.me/" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <Link             
+                href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20ACP"
+                target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
                 Hubungi Kami
               </Link>
             </div>

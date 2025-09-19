@@ -64,7 +64,7 @@ export default function DistributorPage() {
       </Head>
 
       <section 
-        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
         style={{ 
           backgroundImage: "url('/assets/images/distributor/distributor-hero.webp')"
         }}>
@@ -129,7 +129,9 @@ export default function DistributorPage() {
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 px-2 min-h-[4rem] flex items-center justify-center">
                   {distributor.address}
                 </p>
-                <Link href="" className={`${distributor.LinkColor} text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105`}>
+                <Link 
+                  href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20ACP"
+                  target="_blank" className={`${distributor.LinkColor} text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105`}>
                   {distributor.LinkText}
                 </Link>
               </div>
@@ -155,7 +157,10 @@ export default function DistributorPage() {
               </p>
               
               <div className="pt-2">
-                <Link href="" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <Link 
+                  href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20ACP"
+                  target="_blank"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                   Hubungi Kami
                 </Link>
               </div>
@@ -200,7 +205,9 @@ export default function DistributorPage() {
           </h2>
           
           <div className="pt-4">
-            <Link href="" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-lg text-sm md:text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <Link 
+              href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20ACP"
+              target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-lg text-sm md:text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Hubungi Kami
             </Link>
           </div>
