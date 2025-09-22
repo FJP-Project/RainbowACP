@@ -223,8 +223,6 @@ export default function RootLayout({
           <div className="absolute inset-0 rounded-full border-2 border-green-400 opacity-30 animate-ping animation-delay-1000"></div>
           <div className="absolute inset-0 rounded-full border-2 border-green-300 opacity-20 animate-ping animation-delay-2000"></div>
         </div>
-        <div id="back-to-top-container"></div>
-
         {/* Performance and Analytics Scripts */}
         <Script id="page-speed-insights" strategy="afterInteractive">
           {`
