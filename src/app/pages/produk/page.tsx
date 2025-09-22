@@ -77,7 +77,7 @@ export default function ProductPage() {
         style={{ backgroundImage: "url('/assets/images/produk/produkHero.webp')" }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Produk Kami
           </h1>
         </div>
@@ -90,7 +90,7 @@ export default function ProductPage() {
               <br />
               <span className="text-blue-600">Rainbow ACP</span>
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl">
+            <p className="text-gray-600 text-sm sm:text-lg md:text-xl max-w-2xl">
               Teknologi terdepan dengan material berkualitas tinggi untuk hasil maksimal
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function ProductPage() {
               <br />
               <span className="text-blue-600">Rainbow ACP</span>
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="text-gray-600 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto">
               Berbagai keunggulan yang membuat Rainbow ACP menjadi pilihan terbaik
             </p>
           </div>
@@ -170,7 +170,7 @@ export default function ProductPage() {
                   />
                 </div>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                   {feature.description}
                 </p>
               </div>
@@ -188,7 +188,7 @@ export default function ProductPage() {
                   <br />
                   <span className="text-blue-600">Rainbow ACP</span>
                 </h2>
-                <p className="text-gray-600 text-base md:text-lg">
+                <p className="text-gray-600 text-sm md:text-lg">
                   Solusi terdepan untuk berbagai kebutuhan arsitektur modern
                 </p>
               </div>
@@ -211,10 +211,10 @@ export default function ProductPage() {
                     <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-600 text-xs md:text-base leading-relaxed">
                       {item.description}
                     </p>
                   </div>

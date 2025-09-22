@@ -62,9 +62,27 @@ export default function InstalasiPage() {
 
   const qualityFeatures = [
     "Garansi hingga 15 tahun",
-    "Tim teknisi berpengalaman",
+    "Tim teknisi berpengalaman", 
     "Peralatan modern & lengkap",
     "Hasil terjamin berkualitas"
+  ];
+
+  const whyChooseUs = [
+    {
+      icon: CheckCircle,
+      title: "Berpengalaman",
+      description: "Puluhan tahun pengalaman di industri ACP"
+    },
+    {
+      icon: Settings,
+      title: "Peralatan Modern", 
+      description: "Menggunakan teknologi dan alat terkini"
+    },
+    {
+      icon: Wrench,
+      title: "Tim Ahli",
+      description: "Teknisi terlatih dan bersertifikat profesional"
+    }
   ];
 
   return (
@@ -97,26 +115,21 @@ export default function InstalasiPage() {
           })}
         </script>
       </Head>
-
       <section 
         className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
         style={{ 
           backgroundImage: "url('/assets/images/instalasi/instalasi-hero.webp')"
         }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
-        <div className="relative z-10 text-center text-white px-4 max-w-7xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+        <div className="relative z-10 text-center text-white px-4 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Instalasi Rainbow ACP
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Langkah Profesional untuk Hasil Berkualitas Tinggi
-          </p>
         </div>
       </section>
-
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem]">
                 <Image
@@ -131,54 +144,43 @@ export default function InstalasiPage() {
               </div>
             </div>
 
-            <div className="space-y-8 order-1 lg:order-2">
-              <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
                   Kualitas Premium<br />
-                  <span className="bg-blue-500 bg-clip-text text-transparent">
-                    Hasil Maksimal
-                  </span>
+                  <span className="text-blue-600">Hasil Maksimal</span>
                 </h2>
                 
-                <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
+                <p className="text-gray-600 text-sm md:text-lg lg:text-xl leading-relaxed max-w-xl mb-6 md:mb-8">
                   Rainbow ACP menghadirkan solusi instalasi Aluminium Composite Panel 
                   terbaik dengan teknologi terdepan dan tim profesional berpengalaman 
                   puluhan tahun di industri konstruksi.
                 </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {qualityFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700 font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Langkah Instalasi Rainbow ACP
+          <div className="text-left mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+              Langkah Instalasi
+              <br />
+              <span className="text-blue-600">Rainbow ACP</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-sm sm:text-lg md:text-xl max-w-4xl leading-relaxed">
               Proses instalasi ACP yang tepat memerlukan perencanaan yang matang dan pelaksanaan yang cermat untuk memastikan hasil optimal dan tahan lama.
               Berikut adalah langkah-langkah profesional yang kami terapkan.
             </p>
           </div>
 
-          <div className="space-y-12 mb-16">
+          <div className="space-y-8 md:space-y-12 mb-16">
             {installationSteps.map((step, index) => {
-              const IconComponent = step.icon;
               const isEven = index % 2 === 1;
               
               return (
-                <div key={step.id} className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+                <div key={step.id} className={`flex flex-col lg:flex-row items-center gap-6 lg:gap-12 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
                   <div className="w-full lg:w-1/2">
                     <div className="relative h-64 sm:h-80 md:h-96 lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
                       <img
@@ -189,17 +191,17 @@ export default function InstalasiPage() {
                     </div>
                   </div>
 
-                  <div className="w-full lg:w-1/2 space-y-6">
+                  <div className="w-full lg:w-1/2 space-y-4 md:space-y-6">
                     <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base md:text-lg">
                         {step.id}
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                      <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900">
                         {step.title}
                       </h3>
                     </div>
                     
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    <p className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -208,59 +210,56 @@ export default function InstalasiPage() {
             })}
           </div>
 
-          <div className="text-center bg-blue-500 rounded-3xl p-8 md:p-12 text-white">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Mengapa Memilih Jasa Instalasi Kami?
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle className="h-8 w-8 text-white" />
-                </div>
-                <h4 className="font-semibold text-lg">Berpengalaman</h4>
-                <p className="text-white/90 text-sm">Puluhan tahun pengalaman di industri ACP</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                  <Settings className="h-8 w-8 text-white" />
-                </div>
-                <h4 className="font-semibold text-lg">Peralatan Modern</h4>
-                <p className="text-white/90 text-sm">Menggunakan teknologi dan alat terkini</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                  <Wrench className="h-8 w-8 text-white" />
-                </div>
-                <h4 className="font-semibold text-lg">Tim Ahli</h4>
-                <p className="text-white/90 text-sm">Teknisi terlatih dan bersertifikat profesional</p>
-              </div>
+          <div className="bg-blue-500 rounded-2xl lg:rounded-3xl p-6 sm:p-8 md:p-12 text-white">
+            <div className="text-center mb-8 md:mb-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
+                Mengapa Memilih Jasa Instalasi Kami?
+              </h3>
+              <p className="text-white/90 text-sm md:text-base max-w-2xl mx-auto">
+                Berbagai keunggulan yang membuat kami menjadi pilihan terbaik untuk instalasi Rainbow ACP
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+              {whyChooseUs.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div key={index} className="text-center space-y-3 sm:space-y-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                      <IconComponent className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-sm sm:text-base md:text-lg">{item.title}</h4>
+                    <p className="text-white/90 text-xs sm:text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-12 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8 lg:mb-12 leading-tight">
             Butuh bantuan instalasi<br />
-            <span className="block">Rainbow ACP?</span>
+            <span className="text-blue-600">Rainbow ACP?</span>
           </h2>
           
-          <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
             Tim ahli kami siap membantu Anda dalam proses instalasi Rainbow ACP 
             untuk memastikan hasil yang sempurna dan berkualitas tinggi.
           </p>
           
           <div className="pt-4">
             <Link 
-              href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20ACP"
-              target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-lg text-sm md:text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              href="https://wa.me/6282228211989?text=Halo%2C%20saya%20mau%20tanya%20tentang%20instalasi%20ACP"
+              target="_blank" 
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 md:py-5 md:px-12 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-block">
               Hubungi Kami
             </Link>
           </div>
         </div>
       </section>
-
 
       <style jsx>{`
         @keyframes fade-in {
@@ -297,6 +296,16 @@ export default function InstalasiPage() {
         .animate-gradient {
           background-size: 200% 200%;
           animation: gradient-shift 3s ease infinite;
+        }
+
+        /* Improved responsive typography */
+        @media (max-width: 640px) {
+          h1 {
+            line-height: 1.1;
+          }
+          h2 {
+            line-height: 1.2;
+          }
         }
       `}</style>
     </>

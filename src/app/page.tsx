@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image' 
+import Image from 'next/image'
+import Head from 'next/head'
 import { CheckCircle, Palette, Building, MessageCircle } from 'lucide-react'
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -11,19 +12,19 @@ export default function HomePage() {
     number: "1",
     icon: "/assets/images/randomAssets/map.webp",
     title: "100+ Warna dan Ukuran",
-    description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan."
+    description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan warna dan ukuran untuk kebutuhan konstruksi modern."
   },
   {
     number: "2",
     icon: "/assets/images/randomAssets/colorfilter.webp",
     title: "Desain Fleksibel",
-    description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern."
+    description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern dan contemporary building facade."
   },
   {
     number: "3",
     icon: "/assets/images/randomAssets/shield-tick.webp",
     title: "Kualitas Terjamin",
-    description: "Produk yang sudah melalui uji standar internasional."
+    description: "Produk yang sudah melalui uji standar internasional dengan sertifikasi kualitas terpercaya."
   }
 ];
 
@@ -78,52 +79,102 @@ const colors = [
   { id: 48, name: 'Golden Flower Beige', hex: '#D9C19B' },
 ];
 
+  // Schema markup untuk SEO
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RIJA Rainbow ACP",
+    "description": "Distributor Aluminium Composite Panel (ACP) terlengkap di Indonesia dengan 100+ pilihan warna dan kualitas berstandar internasional",
+    "url": "https://rijarainbow.com",
+    "logo": "https://rijarainbow.com/assets/images/whiteLogo-RIJA.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+62-822-2821-1989",
+      "contactType": "sales",
+      "availableLanguage": "Indonesian"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Indonesia"
+    },
+    "product": {
+      "@type": "Product",
+      "name": "Aluminium Composite Panel (ACP)",
+      "description": "Panel komposit aluminium berkualitas tinggi dengan berbagai pilihan warna dan finishing"
+    }
+  };
+
   return (
     <>
+      <Head>
+        <title>RIJA Rainbow ACP - Distributor ACP Terlengkap di Indonesia</title>
+        <meta name="description" content="Distributor Aluminium Composite Panel (ACP) terlengkap di Indonesia. 100+ pilihan warna, kualitas berstandar internasional, tersedia di seluruh Indonesia." />
+        <meta name="keywords" content="ACP, Aluminium Composite Panel, Rainbow ACP, RIJA, distributor ACP Indonesia, panel komposit aluminium, fasad bangunan, material konstruksi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="RIJA Rainbow ACP - Distributor ACP Terlengkap di Indonesia" />
+        <meta property="og:description" content="100+ pilihan warna ACP berkualitas berstandar internasional. Solusi terlengkap untuk kebutuhan fasad bangunan modern." />
+        <meta property="og:image" content="/assets/images/home-Hero.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://rijarainbow.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
+      </Head>
+
+      {/* Hero Section */}
       <section
-        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/assets/images/home-Hero.webp')" }}>
-        <div className="relative z-10 text-center text-white px-4 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
-          <div className="mb-8 md:mb-12">
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/assets/images/home-Hero.webp')" }}
+        role="banner"
+        aria-label="Hero section">
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             <div className="flex items-center justify-center">
               <Image
                 src="/assets/images/whiteLogo-RIJA.webp"
-                alt="Logo RIJA"
-                width={160}
-                height={160}
-                className="w-24 h-24 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-52 lg:h-52 object-contain"
+                alt="RIJA Rainbow ACP Logo - Distributor ACP Terlengkap Indonesia"
+                width={208}
+                height={208}
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 object-contain"
                 priority
-                quality={100}
-                sizes="(max-width: 640px) 64px, (max-width: 768px) 96px, (max-width: 1024px) 128px, 160px"
+                quality={90}
+                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 192px, 208px"
               />
             </div>
+            <h1 className="sr-only">RIJA Rainbow ACP - Distributor Aluminium Composite Panel Terlengkap di Indonesia</h1>
           </div>
         </div>
       </section>
 
-      <section className="py-8 md:py-12 bg-gray-50">
+      {/* International Standards Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50" aria-labelledby="standards-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
             <div className="lg:w-1/3 text-center lg:text-left">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Bertaraf
-                <br />
-                Internasional
+              <h2 id="standards-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                Berstandar Internasional
               </h2>
+              <p className="text-gray-600 text-base sm:text-lg">Produk ACP kami telah tersertifikasi dengan standar kualitas internasional</p>
             </div>
 
             <div className="lg:w-2/3">
-              <div className="grid grid-cols-5 md:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center justify-center">
                 {[1, 2, 3, 4, 5].map((num) => (
                   <div key={num} className="flex justify-center items-center">
                     <Image
                       src={`/assets/images/CTA-Taraf/tarafInternational_${num}.webp`}
-                      alt={`Certification ${num}`}
-                      width={112}
-                      height={112}
-                      className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
-                      quality={100}
-                      sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, (max-width: 1024px) 80px, 96px"
+                      alt={`Sertifikasi internasional ${num} untuk produk ACP Rainbow`}
+                      width={96}
+                      height={96}
+                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain transition-transform duration-300 hover:scale-110"
+                      quality={85}
+                      sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
                     />
                   </div>
                 ))}
@@ -133,28 +184,34 @@ const colors = [
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white">
+      {/* About Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="about-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-                Beyond Ordinary
-                <br />
-                Panels
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1 text-left sm:text-center lg:text-left">
+              <h2 id="about-heading" className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 lg:mb-8 leading-tight">
+                Beyond Ordinary Panels
               </h2>
-              <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+              <p className="text-gray-600 text-sm sm:text-lg md:text-xl leading-relaxed mb-8">
+                RIJA Rainbow ACP menghadirkan solusi panel komposit aluminium premium yang menggabungkan keindahan estetika dengan kekuatan struktural. 
+                Dengan teknologi terdepan dan standar kualitas internasional, kami memberikan pilihan terbaik untuk fasad bangunan modern Anda.
               </p>
+              <Link 
+                href="/about"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-sm sm:text-base transition-colors duration-300 shadow-md hover:shadow-lg"
+                aria-label="Pelajari lebih lanjut tentang RIJA Rainbow ACP">
+                Pelajari Lebih Lanjut
+              </Link>
             </div>
 
-            <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 rounded-lg overflow-hidden mx-auto">
+            <div className="order-1 lg:order-2 relative w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden shadow-2xl">
               <Image
                 src="/assets/images/home-About.webp"
-                alt="Modern Architecture"
+                alt="Aplikasi ACP Rainbow pada arsitektur modern - fasad bangunan berkualitas tinggi"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 hover:scale-105"
                 priority
-                quality={100}
+                quality={85}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -162,14 +219,26 @@ const colors = [
         </div>
       </section>
 
+      {/* Features Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+              Keunggulan
+              <br />
+              <span className="text-blue-600">Rainbow ACP</span>
+            </h2>
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+              Berbagai keunggulan yang membuat Rainbow ACP menjadi pilihan terbaik
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <div className="flex items-left justify-left mb-4 sm:mb-6">
+                className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center h-full flex flex-col">
+                <div className="flex items-center justify-start mb-4 sm:mb-6">
                   <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {feature.number}
                   </div>
@@ -186,7 +255,7 @@ const colors = [
                   />
                 </div>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
                   {feature.description}
                 </p>
               </div>
@@ -195,6 +264,7 @@ const colors = [
         </div>
       </section>
 
+      {/* Color Selection Section */}
       <section className="relative bg-white">
         <div className="relative py-20 sm:py-24 md:py-32 lg:py-40">
           <div className="relative h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] overflow-hidden">
@@ -209,7 +279,7 @@ const colors = [
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center pt-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 md:mb-12 lg:mb-16">
               <span className="text-blue-400">1</span>
               <span className="text-green-400">0</span>
@@ -240,37 +310,43 @@ const colors = [
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 md:mb-12 flex justify-center">
-            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl">
+      {/* Distribution Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white" aria-labelledby="distribution-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-12 sm:mb-16 flex justify-center">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl">
               <Image
                 src="/assets/images/indonesia.webp"
-                alt="Indonesia Distribution Map"
+                alt="Peta distribusi ACP Rainbow di seluruh Indonesia - jaringan distribusi nasional"
                 width={800}
                 height={400}
-                className="w-full h-auto object-contain mx-auto"
-                quality={100}
-                sizes="(max-width: 640px) 384px, (max-width: 768px) 448px, (max-width: 1024px) 512px, (max-width: 1280px) 672px, 800px"
+                className="w-full h-auto object-contain mx-auto transition-transform duration-500 hover:scale-105"
+                quality={85}
+                sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 448px, (max-width: 1280px) 672px, 800px"
               />
             </div>
           </div>
-          <div className="text-center mb-12 md:mb-16">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8">
-              <h2 className="text-xl sm:text-1xl md:text-2xl lg:text-2xl font-bold text-gray-900">
+          
+          <div className="text-center">
+            <div className="flex flex-row sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
+              <h2 id="distribution-heading" className="text-sm sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                 Tersedia di
               </h2>
-              <div className="hidden md:block text-3xl lg:text-4xl text-gray-400">
+              <div className=" text-sm lg:text-4xl text-blue-500" aria-hidden="true">
                 →
               </div>
-              <h2 className="text-xl sm:text-1xl md:text-2xl lg:text-2xl font-bold text-gray-900">
+              <h2 className="text-sm sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600">
                 Seluruh Indonesia
               </h2>
             </div>
+            <p className="text-gray-600 text-sm sm:text-lg max-w-3xl mx-auto">
+              Jaringan distribusi terluas dengan dukungan stok dan layanan di seluruh Nusantara
+            </p>
           </div>
         </div>
       </section>
 
+      {/* CTA Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto leading-tight">
@@ -285,6 +361,32 @@ const colors = [
           </Link>
         </div>
       </section>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        
+        .animate-scroll {
+          width: calc(200% + 2rem);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+          .animate-scroll {
+            animation: none;
+          }
+        }
+      `}</style>
     </>
   )
 }

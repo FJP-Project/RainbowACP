@@ -18,19 +18,17 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white py-8 xs:py-10 sm:py-12 md:py-14 lg:py-16 px-2 xs:px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center items-center justify-center flex mb-6">
-          <div className="relative w-32 h-32 xs:w-28 xs:h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40">
-            <Image 
-              src="/assets/images/whiteLogo-RIJA.webp"
-              alt='RIJA Company Logo'
-              fill
-              className="object-contain"
-              priority
-              quality={100}
-              sizes="(max-width: 475px) 96px, (max-width: 640px) 112px, (max-width: 768px) 128px, (max-width: 1024px) 144px, 160px"
-            />
-          </div>
+          <Image 
+            src="/assets/images/whiteLogo-RIJA.webp"
+            alt="RIJA Company Logo"
+            width={160}
+            height={160}
+            className="w-28 h-auto sm:w-32 md:w-36 lg:w-40 object-contain"
+            priority
+            quality={100}
+            sizes="(max-width: 475px) 96px, (max-width: 640px) 112px, (max-width: 768px) 128px, (max-width: 1024px) 144px, 160px"
+          />
         </div>
-
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8 lg:gap-12">
           <div className="xs:col-span-1">
             <h3 className="text-sm xs:text-base sm:text-lg font-semibold mb-3 xs:mb-4 sm:mb-5 md:mb-6 text-gray-300">Product</h3>
