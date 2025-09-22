@@ -34,23 +34,23 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8 lg:gap-12">
           <div className="xs:col-span-1">
             <h3 className="text-sm xs:text-base sm:text-lg font-semibold mb-3 xs:mb-4 sm:mb-5 md:mb-6 text-gray-300">Product</h3>
-            <nav className="space-y-2 xs:space-y-3 sm:space-y-4">
-              <Link href="/autocapture" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+            <nav className="space-y-2 xs:space-y-2 sm:space-y-2">
+              <Link href="/autocapture" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Autocapture
               </Link>
-              <Link href="/data-governance" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/data-governance" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Data Governance
               </Link>
-              <Link href="/virtual-events" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/virtual-events" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Virtual Events
               </Link>
-              <Link href="/virtual-users" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/virtual-users" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Virtual Users
               </Link>
-              <Link href="/behavioral-analytics" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/behavioral-analytics" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Behavioral Analytics
               </Link>
-              <Link href="/connect" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/connect" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Connect
               </Link>
             </nav>
@@ -58,14 +58,14 @@ const Footer: React.FC = () => {
 
           <div className="xs:col-span-1">
             <h3 className="text-sm xs:text-base sm:text-lg font-semibold mb-3 xs:mb-4 sm:mb-5 md:mb-6 text-gray-300">Distributor</h3>
-            <nav className="space-y-2 xs:space-y-3 sm:space-y-4">
-              <Link href="/resources" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+            <nav className="space-y-2 xs:space-y-2 sm:space-y-2">
+              <Link href="/resources" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Resources
               </Link>
-              <Link href="/blog" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/blog" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Blog
               </Link>
-              <Link href="/documents" className="block text-gray-400 hover:text-white transition-colors text-xs xs:text-sm">
+              <Link href="/documents" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-base">
                 Documents
               </Link>
             </nav>
@@ -73,9 +73,8 @@ const Footer: React.FC = () => {
 
           <div className="xs:col-span-2 lg:col-span-1">
             <h3 className="text-sm xs:text-base sm:text-lg font-semibold mb-3 xs:mb-4 sm:mb-5 md:mb-6 text-gray-300">Office Location</h3>
-            <address className="text-gray-400 text-xs xs:text-sm not-italic leading-relaxed">
-              ABC Company, 123 East, 17th Street,<br />
-              St. louis 10001
+            <address className="text-gray-400 text-xs sm:text-base not-italic leading-relaxed">
+              Perum. Jasamarga Green Residence, Blok AB3 No.9, Kendal Cabe, Kendalpecabean, Kec. Candi, Kabupaten Sidoarjo, Jawa Timur 61271
             </address>
           </div>
 
@@ -88,7 +87,7 @@ const Footer: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="w-full bg-transparent border-b border-gray-600 py-2 xs:py-3 px-0 text-xs xs:text-sm text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none transition-colors"
+                  className="w-full bg-transparent border-b sm:text-base border-gray-600 py-2 xs:py-3 px-0 text-xs xs:text-sm text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none transition-colors"
                   required/>
                 <button
                   type="submit"

@@ -36,14 +36,14 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Alamat Kantor",
-      details: ["Jl. Industri Rainbow No. 123 Sidoarjo, Jawa Timur 61234 Indonesia"],
+      details: ["Perum. Jasamarga Green Residence, Blok AB3 No.9, Kendal Cabe, Kendalpecabean, Kec. Candi, Kabupaten Sidoarjo, Jawa Timur 61271"],
       iconBg: "bg-blue-100",
       iconColor: "text-blue-600"
     },
     {
       icon: Clock,
       title: "Jam Operasional",
-      details: ["Senin - Jumat: 08:00 - 17:00", "Sabtu: 08:00 - 15:00", "Minggu: Tutup"],
+      details: ["Senin - Jumat : 08:00 - 17:00", "Sabtu : 08:00 - 15:00", "Minggu : Tutup"],
       iconBg: "bg-teal-100",
       iconColor: "text-teal-600"
     },
@@ -154,9 +154,7 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Konsultasi
-                <br />
-                <span className="text-blue-600">Gratis!</span>
+                Konsultasi <span className="text-blue-600">Gratis!</span>
               </h2>
               
               <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-lg">

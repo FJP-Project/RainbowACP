@@ -3,49 +3,79 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
-import { CheckCircle, Building2, Monitor, Store } from 'lucide-react'
+import { CheckCircle, Settings, Ruler, Layout, Wrench, Layers, Shield, ClipboardCheck } from 'lucide-react'
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function InstalasiPage() {
-  const installasiExamples = [
+  const installationSteps = [
     {
       id: 1,
-      title: "Gedung",
-      description: "Memberikan tampilan profesional dan perlindungan optimal untuk bangunan komersial.",
-      image: "/assets/images/instalasi/instalasi-assets4.webp",
-      icon: Building2,
+      title: "Persiapan Alat & Bahan",
+      description: "Menyiapkan semua peralatan yang diperlukan seperti pita pengukur, gergaji listrik, bor twist, sekrup, perekat adhesive, dan perlengkapan keselamatan.",
+      icon: Settings,
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 2,
-      title: "Videotron",
-      description: "Struktur khusus yang mampu menopang beban elektronik dengan sistem ventilasi yang baik.",
-      image: "/assets/images/instalasi/instalasi-assets3.webp",
-      icon: Monitor,
+      title: "Persiapan Permukaan",
+      description: "Membersihkan permukaan dinding dari debu, kotoran dan partikel lain. Memastikan permukaan rata, kering dan kuat untuk pemasangan optimal.",
+      icon: ClipboardCheck,
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 3,
-      title: "Perkantoran",
-      description: "Transformasi tampilan modern yang menarik pelanggan dan meningkatkan brand identity.",
-      image: "/assets/images/instalasi/instalasi-assets5.webp",
-      icon: Store,
+      title: "Pengukuran Panel",
+      description: "Melakukan pengukuran vertikal dan horizontal secara akurat menggunakan pita pengukur. Menandai panel sesuai ukuran yang tepat.",
+      icon: Ruler,
+      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 4,
+      title: "Perencanaan Tata Letak",
+      description: "Merencanakan pola dan susunan ACP sesuai dengan desain arsitektur dan mempertimbangkan aspek fungsional seperti pencahayaan dan ventilasi.",
+      icon: Layout,
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 5,
+      title: "Fabrikasi Panel",
+      description: "Melakukan pemotongan dan pengaluran panel menggunakan gergaji listrik dan mesin router untuk menyesuaikan dengan desain yang diinginkan.",
+      icon: Layers,
+      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      details: "Fabrikasi presisi untuk fitting yang sempurna"
+    },
+    {
+      id: 6,
+      title: "Pemasangan ACP",
+      description: "Memasang ACP pada rangka menggunakan teknik riveting dengan paku keling atau sekrup khusus ACP. Memastikan pemasangan lurus dan rata.",
+      icon: Wrench,
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 7,
+      title: "Aplikasi Sealant",
+      description: "Menutup rongga antara panel menggunakan sealant untuk mencegah kebocoran air dan memperpanjang umur ACP serta menjaga keindahan jangka panjang.",
+      icon: Shield,
+      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     }
   ];
 
-  const allApplications = [
-    "Hotel & Resort", "Rumah Sakit", "Sekolah & Universitas", "Mall & Shopping Center",
-    "Bandara & Terminal", "Pabrik & Industri", "Perumahan", "Stadion & Arena",
-    "Bank & Keuangan", "Restaurant & Cafe", "Showroom", "Warehouse"
+  const qualityFeatures = [
+    "Garansi hingga 15 tahun",
+    "Tim teknisi berpengalaman",
+    "Peralatan modern & lengkap",
+    "Hasil terjamin berkualitas"
   ];
 
   return (
     <>
       <Head>
-        <title>Instalasi Rainbow ACP - Gedung, Videotron, Ruko & Toko | Aluminium Composite Panel Terbaik</title>
-        <meta name="description" content="Layanan instalasi Rainbow ACP profesional untuk gedung, videotron, ruko dan toko. Aluminium Composite Panel berkualitas tinggi dengan garansi hingga 15 tahun. Hubungi kami sekarang!" />
-        <meta name="keywords" content="Instalasi Rainbow ACP, ACP Gedung, ACP Videotron, ACP Ruko, ACP Toko, Aluminium Composite Panel, Pemasangan ACP Profesional, Rainbow ACP Indonesia" />
+        <title>Instalasi Rainbow ACP - Langkah Profesional Pemasangan Aluminium Composite Panel</title>
+        <meta name="description" content="Panduan lengkap langkah-langkah instalasi Rainbow ACP profesional. Tim ahli dengan pengalaman puluhan tahun, garansi hingga 15 tahun. Hubungi kami sekarang!" />
+        <meta name="keywords" content="Instalasi Rainbow ACP, Langkah Pemasangan ACP, Cara Pasang ACP, Aluminium Composite Panel Installation, Rainbow ACP Indonesia, Pemasangan ACP Profesional" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Instalasi Rainbow ACP - Gedung, Videotron, Ruko & Toko" />
-        <meta property="og:description" content="Layanan instalasi Rainbow ACP profesional dengan garansi hingga 15 tahun. Cocok untuk gedung, videotron, ruko dan toko." />
+        <meta property="og:title" content="Instalasi Rainbow ACP - Langkah Profesional Pemasangan ACP" />
+        <meta property="og:description" content="Panduan lengkap instalasi Rainbow ACP dengan langkah profesional. Tim ahli berpengalaman dengan garansi hingga 15 tahun." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/assets/images/instalasi/instalasi-hero.webp" />
         <meta name="author" content="Rainbow ACP" />
@@ -55,19 +85,15 @@ export default function InstalasiPage() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Instalasi Rainbow ACP",
-            "description": "Layanan instalasi profesional Rainbow ACP untuk gedung, videotron, ruko dan toko",
-            "provider": {
-              "@type": "Organization",
-              "name": "Rainbow ACP"
-            },
-            "serviceType": "Instalasi Aluminium Composite Panel",
-            "areaServed": "Indonesia",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock"
-            }
+            "@type": "HowTo",
+            "name": "Langkah-Langkah Instalasi Rainbow ACP",
+            "description": "Panduan lengkap langkah pemasangan Rainbow ACP profesional",
+            "step": installationSteps.map((step, index) => ({
+              "@type": "HowToStep",
+              "position": index + 1,
+              "name": step.title,
+              "text": step.description
+            }))
           })}
         </script>
       </Head>
@@ -82,6 +108,9 @@ export default function InstalasiPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Instalasi Rainbow ACP
           </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+            Langkah Profesional untuk Hasil Berkualitas Tinggi
+          </p>
         </div>
       </section>
 
@@ -106,16 +135,25 @@ export default function InstalasiPage() {
               <div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                   Kualitas Premium<br />
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <span className="bg-blue-500 bg-clip-text text-transparent">
                     Hasil Maksimal
                   </span>
                 </h2>
                 
-                <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl">
+                <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
                   Rainbow ACP menghadirkan solusi instalasi Aluminium Composite Panel 
                   terbaik dengan teknologi terdepan dan tim profesional berpengalaman 
                   puluhan tahun di industri konstruksi.
                 </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {qualityFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -123,57 +161,80 @@ export default function InstalasiPage() {
       </section>
 
       <section className="py-20 md:py-28 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Contoh Aplikasi Rainbow ACP
+              Langkah Instalasi Rainbow ACP
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Rainbow ACP dapat diaplikasikan di berbagai jenis bangunan dan konstruksi. 
-              Berikut beberapa contoh penggunaan yang populer.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Proses instalasi ACP yang tepat memerlukan perencanaan yang matang dan pelaksanaan yang cermat untuk memastikan hasil optimal dan tahan lama.
+              Berikut adalah langkah-langkah profesional yang kami terapkan.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {installasiExamples.map((example, index) => {
-              const IconComponent = example.icon;
+          <div className="space-y-12 mb-16">
+            {installationSteps.map((step, index) => {
+              const IconComponent = step.icon;
+              const isEven = index % 2 === 1;
               
               return (
-                <div key={example.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                  <div className="relative h-64">
-                    <Image
-                      src={example.image}
-                      alt={`${example.title} - Rainbow ACP Installation`}
-                      fill
-                      className="object-cover"
-                      quality={95}
-                      sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                        <IconComponent className="h-5 w-5 text-blue-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{example.title}</h3>
+                <div key={step.id} className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+                  <div className="w-full lg:w-1/2">
+                    <div className="relative h-64 sm:h-80 md:h-96 lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                      <img
+                        src={step.image}
+                        alt={`${step.title} - Rainbow ACP Installation Step ${step.id}`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <p className="text-gray-600 mb-4">{example.description}</p>
+                  </div>
+
+                  <div className="w-full lg:w-1/2 space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        {step.id}
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                        {step.title}
+                      </h3>
+                    </div>
+                    
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               );
             })}
           </div>
 
-          <div className="text-center bg-blue-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Dan Banyak Aplikasi Lainnya!
+          <div className="text-center bg-blue-500 rounded-3xl p-8 md:p-12 text-white">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+              Mengapa Memilih Jasa Instalasi Kami?
             </h3>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              <strong>Rainbow ACP cocok untuk semua jenis bangunan:</strong> Hotel, Rumah Sakit, Sekolah, Mall, 
-              Bandara, Pabrik, Perumahan, Bank, Restaurant, Showroom, dan masih banyak lagi. 
-              Tidak ada batasan untuk kreativitas desain Anda!
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="text-center space-y-3">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="font-semibold text-lg">Berpengalaman</h4>
+                <p className="text-white/90 text-sm">Puluhan tahun pengalaman di industri ACP</p>
+              </div>
+              <div className="text-center space-y-3">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                  <Settings className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="font-semibold text-lg">Peralatan Modern</h4>
+                <p className="text-white/90 text-sm">Menggunakan teknologi dan alat terkini</p>
+              </div>
+              <div className="text-center space-y-3">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                  <Wrench className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="font-semibold text-lg">Tim Ahli</h4>
+                <p className="text-white/90 text-sm">Teknisi terlatih dan bersertifikat profesional</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -200,6 +261,7 @@ export default function InstalasiPage() {
         </div>
       </section>
 
+
       <style jsx>{`
         @keyframes fade-in {
           from {
@@ -220,6 +282,21 @@ export default function InstalasiPage() {
           .bg-fixed {
             background-attachment: scroll;
           }
+        }
+
+        /* Custom gradient animations */
+        @keyframes gradient-shift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient-shift 3s ease infinite;
         }
       `}</style>
     </>

@@ -255,10 +255,18 @@ const colors = [
               />
             </div>
           </div>
-          <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-8 md:mb-12">
-            <span className="text-gray-700 font-medium text-sm sm:text-base">Bisa kirim ke</span>
-            <div className="flex-1 h-px bg-gray-300 max-w-32 sm:max-w-48 md:max-w-xs"></div>
-            <span className="text-gray-700 font-medium text-sm sm:text-base">Seluruh Indonesia</span>
+          <div className="text-center mb-12 md:mb-16">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8">
+              <h2 className="text-xl sm:text-1xl md:text-2xl lg:text-2xl font-bold text-gray-900">
+                Tersedia di
+              </h2>
+              <div className="hidden md:block text-3xl lg:text-4xl text-gray-400">
+                →
+              </div>
+              <h2 className="text-xl sm:text-1xl md:text-2xl lg:text-2xl font-bold text-gray-900">
+                Seluruh Indonesia
+              </h2>
+            </div>
           </div>
         </div>
       </section>

@@ -33,10 +33,26 @@ export default function DistributorPage() {
   ];
 
   const mascotImages = [
-    "/assets/images/mascot/mascot1-main.webp",
-    "/assets/images/mascot/mascot2-contractor.webp",
-    "/assets/images/mascot/mascot3-arsitek.webp",
-    "/assets/images/mascot/mascot4-pengirim.webp"
+    {
+      src: "/assets/images/mascot/mascot1-main.webp",
+      label: "Main",
+      bgColor: "bg-blue-500"
+    },
+    {
+      src: "/assets/images/mascot/mascot2-contractor.webp",
+      label: "Contractor",
+      bgColor: "bg-pink-500"
+    },
+    {
+      src: "/assets/images/mascot/mascot3-arsitek.webp",
+      label: "Architect",
+      bgColor: "bg-green-500"
+    },
+    {
+      src: "/assets/images/mascot/mascot4-pengirim.webp",
+      label: "Delivery",
+      bgColor: "bg-purple-500"
+    }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -80,13 +96,13 @@ export default function DistributorPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+              <h2 className="text-xl sm:text-1xl md:text-2xl lg:text-2xl font-bold text-gray-900">
                 Tersedia di
               </h2>
               <div className="hidden md:block text-3xl lg:text-4xl text-gray-400">
                 →
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+              <h2 className="text-xl sm:text-1xl md:text-2xl lg:text-2xl font-bold text-gray-900">
                 Seluruh Indonesia
               </h2>
             </div>
@@ -169,14 +185,22 @@ export default function DistributorPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                 <Image
-                  src={mascotImages[currentImageIndex]}
-                  alt={`Rainbow ACP Construction Mascot Character ${currentImageIndex + 1}`}
+                  src={mascotImages[currentImageIndex].src}
+                  alt={`Rainbow ACP ${mascotImages[currentImageIndex].label} Character`}
                   fill
                   className="object-contain transition-opacity duration-500 ease-in-out"
                   quality={100}
                   sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 448px"
                 />
 
+                {/* Label/Badge untuk karakter */}
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
+                  <span className={`${mascotImages[currentImageIndex].bgColor} text-white text-xs sm:text-sm md:text-base font-bold px-3 py-1 sm:px-4 sm:py-2 rounded-full shadow-lg`}>
+                    {mascotImages[currentImageIndex].label}
+                  </span>
+                </div>
+
+                {/* Navigation dots */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {mascotImages.map((_, index) => (
                     <button
@@ -190,6 +214,31 @@ export default function DistributorPage() {
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}
+                </div>
+
+                {/* Navigation arrows for mobile */}
+                <div className="absolute inset-y-0 left-0 flex items-center">
+                  <button
+                    onClick={() => setCurrentImageIndex(currentImageIndex === 0 ? mascotImages.length - 1 : currentImageIndex - 1)}
+                    className="bg-white/80 hover:bg-white text-gray-700 rounded-full p-2 shadow-lg ml-2 transition-all duration-200 hover:scale-110 md:opacity-0 md:hover:opacity-100"
+                    aria-label="Previous image"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                </div>
+                
+                <div className="absolute inset-y-0 right-0 flex items-center">
+                  <button
+                    onClick={() => setCurrentImageIndex(currentImageIndex === mascotImages.length - 1 ? 0 : currentImageIndex + 1)}
+                    className="bg-white/80 hover:bg-white text-gray-700 rounded-full p-2 shadow-lg mr-2 transition-all duration-200 hover:scale-110 md:opacity-0 md:hover:opacity-100"
+                    aria-label="Next image"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
