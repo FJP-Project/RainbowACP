@@ -320,7 +320,7 @@ const colors = [
                 alt="Peta distribusi ACP Rainbow di seluruh Indonesia - jaringan distribusi nasional"
                 width={800}
                 height={400}
-                className="w-full h-auto object-contain mx-auto transition-transform duration-500 hover:scale-105"
+                className="w-full h-auto object-contain mx-auto"
                 quality={85}
                 sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 448px, (max-width: 1280px) 672px, 800px"
               />
