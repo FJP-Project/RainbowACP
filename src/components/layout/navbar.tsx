@@ -164,7 +164,7 @@ const Navbar: React.FC = () => {
           <div className="px-6 pt-4 pb-6">
             <Link
               href="/pages/kontak"
-              className="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
               onClick={() => setIsMenuOpen(false)}>
               Hubungi Kami
             </Link>

@@ -13,7 +13,7 @@ export default function ContactPage() {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Hubungi kami langsung via WhatsApp untuk respon cepat",
-      contact: "+62 812-3456-7890",
+      contact: "+6282228211989",
       action: "Chat Sekarang",
       color: "bg-green-500 hover:bg-green-600",
       iconBg: "bg-green-100",
@@ -43,7 +43,7 @@ export default function ContactPage() {
     {
       icon: Clock,
       title: "Jam Operasional",
-      details: ["Senin - Jumat : 08:00 - 17:00", "Sabtu : 08:00 - 15:00", "Minggu : Tutup"],
+      details: ["Senin - Jumat : 08:00 - 16:00", "Sabtu : 08:00 - 12:00", "Minggu : Tutup"],
       iconBg: "bg-teal-100",
       iconColor: "text-teal-600"
     },
