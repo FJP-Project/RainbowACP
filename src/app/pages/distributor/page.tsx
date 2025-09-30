@@ -21,16 +21,6 @@ export default function DistributorPage() {
     },
     {
       id: 2,
-      city: "Surabaya", 
-      province: "Jawa Timur",
-      address: "Jl. Ahmad Yani No. 456, Gayungan, Surabaya, Jawa Timur 60235",
-      phone: "+62 822-2821-1989",
-      email: "surabaya@rainbowacp.com",
-      LinkText: "Hubungi Kami",
-      LinkColor: "bg-orange-500 hover:bg-orange-600"
-    },
-    {
-      id: 3,
       city: "Jakarta",
       province: "DKI Jakarta",
       address: "Jl. TB Simatupang No. 789, Cilandak, Jakarta Selatan, DKI Jakarta 12430",
@@ -222,7 +212,7 @@ export default function DistributorPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
             {distributors.map((distributor) => (
               <div
                 key={distributor.id}
@@ -241,29 +231,6 @@ export default function DistributorPage() {
                   <p className="text-blue-600 text-sm md:text-base font-medium mb-4">
                     {distributor.province}
                   </p>
-                  
-                  <div className="space-y-3 mb-6 text-left">
-                    <div className="flex items-start space-x-3">
-                      <MapPin className="w-4 h-4 md:w-5 md:h-5 text-gray-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                        {distributor.address}
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-4 h-4 md:w-5 md:h-5 text-gray-400 flex-shrink-0" />
-                      <p className="text-gray-600 text-xs sm:text-sm md:text-base">
-                        {distributor.phone}
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-4 h-4 md:w-5 md:h-5 text-gray-400 flex-shrink-0" />
-                      <p className="text-gray-600 text-xs sm:text-sm md:text-base">
-                        {distributor.email}
-                      </p>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="text-center mt-auto">

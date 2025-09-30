@@ -24,7 +24,7 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email",
       description: "Kirim pertanyaan detail melalui email",
-      contact: "info@rainbowacp.com",
+      contact: "rainbow.acp@gmail.com ",
       action: "Kirim Email",
       color: "bg-orange-500 hover:bg-orange-600",
       iconBg: "bg-orange-100",
@@ -116,7 +116,7 @@ export default function ContactPage() {
             <div className="relative">
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[18rem] rounded-2xl overflow-hidden shadow-2xl">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.26476813163!2d112.58489!3d-7.3378478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e7ca3735ac7b%3A0x293d28b9f0fde2c9!2sSidoarjo%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1699000000000!5m2!1sid!2sid"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15823.249747391075!2d112.72866979193873!3d-7.485952174999834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e7d0cdf0334d%3A0xa1da3e0c56022bfc!2sRainbow%20ACP%20Indonesia%20%7C%20Exclusive%20Distributor%20Aluminium%20Composite%20Panel!5e0!3m2!1sen!2sid!4v1759205408144!5m2!1sen!2sid"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

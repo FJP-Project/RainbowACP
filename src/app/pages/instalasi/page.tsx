@@ -11,21 +11,21 @@ export default function InstalasiPage() {
     {
       id: 1,
       title: "Persiapan Alat & Bahan",
-      description: "Menyiapkan semua peralatan yang diperlukan seperti pita pengukur, gergaji listrik, bor twist, sekrup, perekat adhesive, dan perlengkapan keselamatan.",
+      description: "Menyiapkan semua peralatan yang diperlukan seperti meteran, waterpas, router, gerinda, bor, dll. termasuk perlengkapan keselamatan.",
       icon: Settings,
       image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 2,
       title: "Persiapan Permukaan",
-      description: "Membersihkan permukaan dinding dari debu, kotoran dan partikel lain. Memastikan permukaan rata, kering dan kuat untuk pemasangan optimal.",
+      description: "Memastikan permukaan rata, kering dan kuat untuk pemasangan optimal, Pemasangan rangka yang kuat dan lurus.",
       icon: ClipboardCheck,
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 3,
       title: "Pengukuran Panel",
-      description: "Melakukan pengukuran vertikal dan horizontal secara akurat menggunakan pita pengukur. Menandai panel sesuai ukuran yang tepat.",
+      description: "Melakukan pengukuran vertikal dan horizontal secara akurat menggunakan alat pengukur. Menandai panel sesuai ukuran yang tepat.",
       icon: Ruler,
       image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
@@ -39,7 +39,7 @@ export default function InstalasiPage() {
     {
       id: 5,
       title: "Fabrikasi Panel",
-      description: "Melakukan pemotongan dan pengaluran panel menggunakan gergaji listrik dan mesin router untuk menyesuaikan dengan desain yang diinginkan.",
+      description: "Melakukan pemotongan dan pengaluran panel menggunakan mesin pemotong dan mesin router untuk menyesuaikan dengan desain yang diinginkan.",
       icon: Layers,
       image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       details: "Fabrikasi presisi untuk fitting yang sempurna"
@@ -47,7 +47,7 @@ export default function InstalasiPage() {
     {
       id: 6,
       title: "Pemasangan ACP",
-      description: "Memasang ACP pada rangka menggunakan teknik riveting dengan paku keling atau sekrup khusus ACP. Memastikan pemasangan lurus dan rata.",
+      description: "Memasang ACP pada rangka menggunakan teknik secrw atau riveting. Memastikan pemasangan lurus dan rata.",
       icon: Wrench,
       image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
@@ -208,32 +208,6 @@ export default function InstalasiPage() {
                 </div>
               );
             })}
-          </div>
-
-          <div className="bg-blue-500 rounded-2xl lg:rounded-3xl p-6 sm:p-8 md:p-12 text-white">
-            <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
-                Mengapa Memilih Jasa Instalasi Kami?
-              </h3>
-              <p className="text-white/90 text-sm md:text-base max-w-2xl mx-auto">
-                Berbagai keunggulan yang membuat kami menjadi pilihan terbaik untuk instalasi Rainbow ACP
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
-              {whyChooseUs.map((item, index) => {
-                const IconComponent = item.icon;
-                return (
-                  <div key={index} className="text-center space-y-3 sm:space-y-4">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                      <IconComponent className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-sm sm:text-base md:text-lg">{item.title}</h4>
-                    <p className="text-white/90 text-xs sm:text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>
