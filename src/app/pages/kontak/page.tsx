@@ -144,7 +144,7 @@ export default function ContactPage() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                 <Image
-                  src="/assets/images/main-mascot1.webp" 
+                  src="/assets/images/mascot/mascot1-main.webp" 
                   alt="Rainbow ACP Mascot - Customer Service Representative"
                   fill
                   className="object-contain"
