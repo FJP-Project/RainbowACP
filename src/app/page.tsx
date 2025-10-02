@@ -168,7 +168,7 @@ const colors = [
                 {[1, 2, 3, 4, 5].map((num) => (
                   <div key={num} className="flex justify-center items-center">
                     <Image
-                      src={`/assets/images/CTA-Taraf/tarafInternational_${num}.webp`}
+                      src={`/assets/images/CTA-Taraf/Taraf2/tarafInternational_${num}p2.webp`}
                       alt={`Sertifikasi internasional ${num} untuk produk ACP Rainbow`}
                       width={96}
                       height={96}
