@@ -11,52 +11,59 @@ export default function ProductPage() {
     {
       id: 1,
       title: "Material Premium",
-      description: "Terbuat dari bahan aluminium berkualitas tinggi dengan lapisan protective yang tahan terhadap cuaca ekstrem.",
+      description: "Dibuat dari aluminium berkualitas tinggi dengan lapisan pelindung khusus yang mampu bertahan pada cuaca ekstrem.",
       position: "top-left",
       color: "bg-blue-500"
     },
     {
       id: 2, 
       title: "Ketebalan Variatif",
-      description: "Tersedia dalam berbagai ketebalan mulai dari 3mm hingga 6mm sesuai kebutuhan konstruksi.",
+      description: "Tersedia dalam pilihan ketebalan 3mm hingga 4mm, fleksibel untuk menyesuaikan kebutuhan proyek konstruksi Anda.",
       position: "left",
       color: "bg-teal-500"
     },
     {
       id: 3,
       title: "Finishing Sempurna", 
-      description: "Surface halus dengan teknologi coating advanced yang memberikan hasil akhir premium.",
+      description: "Permukaan halus dengan teknologi coating modern yang menghasilkan tampilan premium, bergaransi resmi 5–15 tahun.",
       position: "top-right",
       color: "bg-pink-500"
     },
     {
       id: 4,
       title: "Daya Tahan Tinggi",
-      description: "Tahan rayap, anti jamur, tahan api, dan memiliki daya tahan hingga 20+ tahun.",
+      description: "Anti rayap, anti jamur, tahan api, serta kokoh menghadapi berbagai kondisi cuaca yang paling ekstrem sekalipun.",
       position: "bottom-right", 
       color: "bg-orange-500"
+    },
+    {
+      id: 5,
+      title: "Warna & Motif Custom",
+      description: "Menyediakan finishing warna dan motif sesuai pesanan khusus, dengan minimum pembelian sebesar 1000 m² produksi.",
+      position: "bottom-right", 
+      color: "bg-red-500"
     }
   ];
 
-    const features = [
-      {
-        number: "1",
-        icon: "/assets/images/randomAssets/map.webp",
-        title: "100+ Warna dan Ukuran",
-        description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan."
-      },
-      {
-        number: "2",
-        icon: "/assets/images/randomAssets/colorfilter.webp",
-        title: "Desain Fleksibel",
-        description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern."
-      },
-      {
-        number: "3",
-        icon: "/assets/images/randomAssets/shield-tick.webp",
-        title: "Kualitas Terjamin",
-        description: "Produk yang sudah melalui uji standar internasional."
-      }
+  const features = [
+    {
+      number: "1",
+      icon: "/assets/images/randomAssets/map.webp",
+      title: "100+ Warna dan Ukuran",
+      description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan."
+    },
+    {
+      number: "2",
+      icon: "/assets/images/randomAssets/colorfilter.webp",
+      title: "Desain Fleksibel",
+      description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern."
+    },
+    {
+      number: "3",
+      icon: "/assets/images/randomAssets/shield-tick.webp",
+      title: "Kualitas Terjamin",
+      description: "Produk yang sudah melalui uji standar internasional."
+    }
   ];
 
   return (
@@ -82,9 +89,10 @@ export default function ProductPage() {
           </h1>
         </div>
       </section>
+
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50">
         <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="text-left mb-12 md:mb-16">
+          <div className="text-left mb-6 md:mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
               Spesifikasi
               <br />
@@ -94,49 +102,21 @@ export default function ProductPage() {
               Teknologi terdepan dengan material berkualitas tinggi untuk hasil maksimal
             </p>
           </div>
-          <div className="relative">
-            <div className="flex justify-center mb-8 md:mb-12">
-              <div className="relative w-full max-w-lg md:max-w-2xl">
-                <Image
-                  src="/assets/images/produk/RainbowACP-Simulation.webp"
-                  alt="Rainbow ACP Colorful Panels Specification"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-contain"
-                  quality={100}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 600px"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-              {specifications.map((spec, index) => (
-                <div
-                  key={spec.id}
-                  className="bg-white rounded-xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-fit">
-                  <div className="flex justify-center items-center">
-                    <div className={`${spec.color} w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg flex-shrink-0`}>
-                      {spec.id}
-                    </div>
-                    <div className="relative mx-3 sm:mx-4 flex-shrink-0 flex justify-center">
-                      <div className={`${spec.color} w-1 h-20 rounded-full`} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
-                        {spec.title}
-                      </h3>
-                      <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                        {spec.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          
+          <div className="flex justify-center mb-8 md:mb-12 -mt-8">
+            <div className="relative w-full max-w-lg md:max-w-2xl">
+              <Image
+                src="/assets/images/produk/RainbowACP-Spesifikasi.webp"
+                alt="Rainbow ACP Colorful Panels Specification"
+                width={600}
+                height={400}
+                className="w-full object-contain"
+                quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 600px"
+              />
             </div>
           </div>
-        </div>
-      </section>
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
               Keunggulan
@@ -148,36 +128,37 @@ export default function ProductPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+            {specifications.map((spec, index) => (
               <div
-                key={index}
-                className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center h-full flex flex-col">
-                <div className="flex items-center justify-start mb-4 sm:mb-6">
-                  <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                    {feature.number}
+                key={spec.id}
+                className={`bg-white rounded-xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-fit ${
+                  specifications.length % 2 !== 0 && index === specifications.length - 1 
+                    ? 'lg:col-span-2 lg:mx-auto lg:max-w-md' 
+                    : ''
+                }`}>
+                <div className="flex justify-center items-center">
+                  <div className={`${spec.color} w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg flex-shrink-0`}>
+                    {spec.id}
+                  </div>
+                  <div className="relative mx-3 sm:mx-4 flex-shrink-0 flex justify-center">
+                    <div className={`${spec.color} w-1 h-20 rounded-full`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
+                      {spec.title}
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                      {spec.description}
+                    </p>
                   </div>
                 </div>
-                <div className="mb-4 sm:mb-6 flex justify-center">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width={68}
-                    height={68}
-                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-17 md:h-17 object-contain"
-                    quality={100}
-                    sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, 68px"
-                  />
-                </div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-                  {feature.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -223,18 +204,39 @@ export default function ProductPage() {
             </div>
 
             <div className="relative">
-              <div className="relative h-64 sm:h-80 md:h-96 lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/assets/images/produk/produkImage-assets1.webp"
-                  alt="Modern Building with Rainbow ACP Facade"
-                  fill
-                  className="object-cover"
-                  quality={100}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative h-80 sm:h-96 md:h-[28rem] lg:h-[32rem]">
+                <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl z-10">
+                  <Image
+                    src="/assets/images/produk/produkImage-assets5.webp"
+                    alt="Modern Building with Rainbow ACP Facade"
+                    fill
+                    className="object-cover"
+                    quality={100}
+                    sizes="(max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="absolute bottom-0 right-0 w-2/3 h-2/3 rounded-xl overflow-hidden shadow-xl z-20">
+                  <Image
+                    src="/assets/images/produk/produkImage-assets3.webp"
+                    alt="Rainbow ACP Interior Application"
+                    fill
+                    className="object-cover"
+                    quality={100}
+                    sizes="(max-width: 1024px) 40vw, 25vw"
+                  />
+                </div>
+                <div className="absolute top-1/4 right-4 w-1/3 h-1/3 rounded-lg overflow-hidden shadow-lg z-30 border-4 border-white">
+                  <Image
+                    src="/assets/images/produk/produkImage-assets4.webp"
+                    alt="Rainbow ACP Signage Application"
+                    fill
+                    className="object-cover"
+                    quality={100}
+                    sizes="(max-width: 1024px) 30vw, 20vw"
+                  />
+                </div>
               </div>
-
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 md:p-6 shadow-xl">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 md:p-6 shadow-xl z-40">
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-blue-600">20+</div>
                   <div className="text-xs md:text-sm text-gray-600">Proyek Selesai</div>
@@ -275,7 +277,7 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-    </section>
+      </section>
     </>
   )
-} 
+}

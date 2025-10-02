@@ -70,7 +70,7 @@ export default function DistributorPage() {
     {
       icon: Building2,
       title: "Jaringan Luas",
-      description: "Distribusi di seluruh Indonesia dengan coverage yang komprehensif"
+      description: "Kami telah bekerja sama dengan berbagai ekspedisi untuk memenuhi kebutuhan material Rainbow ACP ke seluruh wilayah di indonesia."
     },
     {
       icon: Globe,
@@ -80,7 +80,7 @@ export default function DistributorPage() {
     {
       icon: MapPin,
       title: "Lokasi Strategis", 
-      description: "Lokasi distributor yang mudah diakses di kota-kota besar"
+      description: "Lokasi distributor yang mudah diakses untuk pengiriman ke seluruh indonesia"
     }
   ];
 
@@ -142,7 +142,7 @@ export default function DistributorPage() {
           <div className="text-center mb-12 md:mb-16">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mb-8 md:mb-12">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
-                Tersedia di
+                Melayani Pengiriman ke
               </h2>
               <div className="text-2xl lg:text-3xl text-blue-600 transform rotate-90 sm:rotate-0">
                 →
@@ -152,7 +152,7 @@ export default function DistributorPage() {
               </h2>
             </div>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-              Dengan jaringan distribusi yang luas, kami hadir untuk melayani kebutuhan Rainbow ACP Anda di berbagai kota
+              Kami hadir untuk melayani kebutuhan Rainbow ACP Anda di berbagai kota di seluruh Indonesia.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ export default function DistributorPage() {
                 </h2>
                 
                 <p className="text-gray-600 text-sm md:text-lg lg:text-xl leading-relaxed max-w-lg mb-6 md:mb-8">
-                  Rainbow ACP menghadirkan solusi Aluminium Composite Panel yang melampaui standar biasa. 
+                  Rainbow ACP menghadirkan solusi Aluminium Composite Panel yang berkualitas. 
                   Dengan teknologi terdepan dan kualitas premium, kami berkomitmen memberikan yang terbaik 
                   untuk setiap proyek arsitektur modern Anda.
                 </p>

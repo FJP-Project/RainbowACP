@@ -11,14 +11,14 @@ export default function HomePage() {
   {
     number: "1",
     icon: "/assets/images/randomAssets/map.webp",
-    title: "100+ Warna dan Ukuran",
-    description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan warna dan ukuran untuk kebutuhan konstruksi modern."
+    title: "100+ Warna",
+    description: "Solusi Aluminium Composite Panel (ACP) terlengkap dengan berbagai pilihan warna dan dapat request warna sesuai yang di inginkan untuk kebutuhan konstruksi modern."
   },
   {
     number: "2",
     icon: "/assets/images/randomAssets/colorfilter.webp",
-    title: "Desain Fleksibel",
-    description: "Pilihan desain yang dapat disesuaikan dengan kebutuhan arsitektur modern dan contemporary building facade."
+    title: "Kuat dan Mudah dibentuk",
+    description: "Material kuat dan tidak mudah patah, mudah untuk dibentuk sehingga dapat memenuhi kebutuhan design dan arsitektur yang modern."
   },
   {
     number: "3",
@@ -196,17 +196,17 @@ const colors = [
                 RIJA Rainbow ACP menghadirkan solusi panel komposit aluminium premium yang menggabungkan keindahan estetika dengan kekuatan struktural. 
                 Dengan teknologi terdepan dan standar kualitas internasional, kami memberikan pilihan terbaik untuk fasad bangunan modern Anda.
               </p>
-              <Link 
+              {/* <Link 
                 href="/about"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-sm sm:text-base transition-colors duration-300 shadow-md hover:shadow-lg"
                 aria-label="Pelajari lebih lanjut tentang RIJA Rainbow ACP">
                 Pelajari Lebih Lanjut
-              </Link>
+              </Link> */}
             </div>
 
             <div className="order-1 lg:order-2 relative w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="/assets/images/home-About.webp"
+                src="/assets/images/home-assets1.webp"
                 alt="Aplikasi ACP Rainbow pada arsitektur modern - fasad bangunan berkualitas tinggi"
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-105"
@@ -330,7 +330,7 @@ const colors = [
           <div className="text-center">
             <div className="flex flex-row sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
               <h2 id="distribution-heading" className="text-sm sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-                Tersedia di
+                Melayani Pengiriman ke
               </h2>
               <div className=" text-sm lg:text-4xl text-blue-500" aria-hidden="true">
                 →
@@ -340,7 +340,7 @@ const colors = [
               </h2>
             </div>
             <p className="text-gray-600 text-sm sm:text-lg max-w-3xl mx-auto">
-              Jaringan distribusi terluas dengan dukungan stok dan layanan di seluruh Nusantara
+              Ketersediaan stok cukup untuk memenuhi kebutuhan material di seluruh indonesia
             </p>
           </div>
         </div>

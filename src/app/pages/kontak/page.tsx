@@ -33,7 +33,7 @@ export default function ContactPage() {
   ];
 
   const officeInfo = [
-    {
+    { 
       icon: MapPin,
       title: "Alamat Kantor",
       details: ["Perum. Jasamarga Green Residence, Blok AB3 No.9, Kendal Cabe, Kendalpecabean, Kec. Candi, Kabupaten Sidoarjo, Jawa Timur 61271"],

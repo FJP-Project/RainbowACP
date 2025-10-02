@@ -13,35 +13,35 @@ export default function InstalasiPage() {
       title: "Persiapan Alat & Bahan",
       description: "Menyiapkan semua peralatan yang diperlukan seperti meteran, waterpas, router, gerinda, bor, dll. termasuk perlengkapan keselamatan.",
       icon: Settings,
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/PersiapanAlat.webp",
     },
     {
       id: 2,
       title: "Persiapan Permukaan",
       description: "Memastikan permukaan rata, kering dan kuat untuk pemasangan optimal, Pemasangan rangka yang kuat dan lurus.",
       icon: ClipboardCheck,
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/PersiapanPermukaan.webp",
     },
     {
       id: 3,
       title: "Pengukuran Panel",
       description: "Melakukan pengukuran vertikal dan horizontal secara akurat menggunakan alat pengukur. Menandai panel sesuai ukuran yang tepat.",
       icon: Ruler,
-      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/PengukuranPanel.webp",
     },
     {
       id: 4,
       title: "Perencanaan Tata Letak",
       description: "Merencanakan pola dan susunan ACP sesuai dengan desain arsitektur dan mempertimbangkan aspek fungsional seperti pencahayaan dan ventilasi.",
       icon: Layout,
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/PerancanganTataLetak.webp",
     },
     {
       id: 5,
       title: "Fabrikasi Panel",
       description: "Melakukan pemotongan dan pengaluran panel menggunakan mesin pemotong dan mesin router untuk menyesuaikan dengan desain yang diinginkan.",
       icon: Layers,
-      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/FabrikasiPanel.webp",
       details: "Fabrikasi presisi untuk fitting yang sempurna"
     },
     {
@@ -49,14 +49,14 @@ export default function InstalasiPage() {
       title: "Pemasangan ACP",
       description: "Memasang ACP pada rangka menggunakan teknik secrw atau riveting. Memastikan pemasangan lurus dan rata.",
       icon: Wrench,
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/PemasanganACP.webp",
     },
     {
       id: 7,
       title: "Aplikasi Sealant",
       description: "Menutup rongga antara panel menggunakan sealant untuk mencegah kebocoran air dan memperpanjang umur ACP serta menjaga keindahan jangka panjang.",
       icon: Shield,
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/instalasi/AplikasiSealant.webp",
     }
   ];
 
